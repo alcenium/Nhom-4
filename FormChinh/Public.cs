@@ -18,7 +18,8 @@ namespace FormChinh
 
         public static SqlConnection ketnoi()
         {
-            string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
+            string connString = "Data Source=LAPTOP-N5BUPLIL;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
             conn = new SqlConnection(connString);
             return conn;
         }
