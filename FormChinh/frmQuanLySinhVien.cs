@@ -103,5 +103,10 @@ namespace FormChinh
             sql = $"SELECT * FROM QuanLySinhVien WHERE maSV LIKE '%{tbTimKiem.Text}%' OR hoTen LIKE '%{tbTimKiem.Text}%' OR maLop LIKE '%{tbTimKiem.Text}%'";
             LayNguon(sql);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
