@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace FormChinh
 {
@@ -15,6 +16,16 @@ namespace FormChinh
         public frmQuanLyTaiKhoan()
         {
             InitializeComponent();
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
