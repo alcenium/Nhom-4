@@ -26,5 +26,10 @@ namespace FormChinh
         {
 
         }
+
+        private void frmThucHienDiemDanh_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
