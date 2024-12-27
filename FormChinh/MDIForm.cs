@@ -62,5 +62,18 @@ namespace FormChinh
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void mnuQlyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MDIForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

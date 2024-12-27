@@ -20,7 +20,8 @@ namespace FormChinh
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-          
+            //frmDoiMatKhau frm = new frmDoiMatKhau();
+            //frm.Show();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

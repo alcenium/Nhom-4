@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtQuenMK = new System.Windows.Forms.TextBox();
             this.btnQuenMK = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -72,22 +72,23 @@
             this.btnQuenMK.Text = "Gửi";
             this.btnQuenMK.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnThoat
             // 
-            this.button1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(262, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 43);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThoat.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(262, 132);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(187, 43);
+            this.btnThoat.TabIndex = 4;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmQuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 209);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnQuenMK);
             this.Controls.Add(this.txtQuenMK);
             this.Controls.Add(this.label2);
@@ -105,6 +106,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtQuenMK;
         private System.Windows.Forms.Button btnQuenMK;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThoat;
     }
 }

@@ -16,5 +16,12 @@ namespace FormChinh
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmDangNhap frm = new frmDangNhap();
+            frm.Show();
+        }
     }
 }
