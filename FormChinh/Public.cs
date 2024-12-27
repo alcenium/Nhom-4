@@ -20,8 +20,8 @@ namespace FormChinh
         {
             //string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
             //string connString = "Data Source=LAPTOP-N5BUPLIL;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
-            //string connString = "Data Source=DESKTOP-1FODL3G\\USTEAM;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
-            string connString = "Data Source=LTANH59\\MSSQLSERVER01;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
+            string connString = "Data Source=DESKTOP-1FODL3G\\USTEAM;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = "Data Source=LTANH59\\MSSQLSERVER01;Initial Catalog=phanMemDiemDanh;Integrated Security=True;Encrypt=False";
             conn = new SqlConnection(connString);
             return conn;
         }

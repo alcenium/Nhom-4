@@ -36,11 +36,12 @@
             this.thựcHiệnĐiểmDanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửĐiểmDanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
-            this.tstbLoaiTaiKhoan = new System.Windows.Forms.ToolStripTextBox();
             this.tstbTenTaiKhoan = new System.Windows.Forms.ToolStripTextBox();
+            this.tstbLoaiTaiKhoan = new System.Windows.Forms.ToolStripTextBox();
             this.tsmiDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiKetThuc = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,18 +108,12 @@
             this.tstbTenTaiKhoan,
             this.tstbLoaiTaiKhoan,
             this.tsmiDoiMatKhau,
+            this.toolStripMenuItem1,
             this.tsmiDangXuat,
             this.tsmiKetThuc});
             this.tsmiTaiKhoan.Name = "tsmiTaiKhoan";
             this.tsmiTaiKhoan.Size = new System.Drawing.Size(70, 20);
             this.tsmiTaiKhoan.Text = "Tài Khoản";
-            // 
-            // tstbLoaiTaiKhoan
-            // 
-            this.tstbLoaiTaiKhoan.Enabled = false;
-            this.tstbLoaiTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tstbLoaiTaiKhoan.Name = "tstbLoaiTaiKhoan";
-            this.tstbLoaiTaiKhoan.Size = new System.Drawing.Size(100, 23);
             // 
             // tstbTenTaiKhoan
             // 
@@ -126,6 +121,13 @@
             this.tstbTenTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstbTenTaiKhoan.Name = "tstbTenTaiKhoan";
             this.tstbTenTaiKhoan.Size = new System.Drawing.Size(100, 23);
+            // 
+            // tstbLoaiTaiKhoan
+            // 
+            this.tstbLoaiTaiKhoan.Enabled = false;
+            this.tstbLoaiTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tstbLoaiTaiKhoan.Name = "tstbLoaiTaiKhoan";
+            this.tstbLoaiTaiKhoan.Size = new System.Drawing.Size(100, 23);
             // 
             // tsmiDoiMatKhau
             // 
@@ -147,6 +149,11 @@
             this.tsmiKetThuc.Size = new System.Drawing.Size(180, 22);
             this.tsmiKetThuc.Text = "Kết thúc";
             this.tsmiKetThuc.Click += new System.EventHandler(this.tsmiKetThuc_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // MDIForm
             // 
@@ -182,6 +189,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem tsmiDangXuat;
         private System.Windows.Forms.ToolStripMenuItem tsmiKetThuc;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }
 

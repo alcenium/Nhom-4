@@ -26,9 +26,9 @@ namespace FormChinh
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'phanMemDiemDanhDataSet1.QuanLySinhVien' table. You can move, or remove it, as needed.
-            this.quanLySinhVienTableAdapter1.Fill(this.phanMemDiemDanhDataSet1.QuanLySinhVien);
-            LayNguon();
+            // TODO: This line of code loads data into the 'phanMemDiemDanhDataSet.QuanLySinhVien' table. You can move, or remove it, as needed.
+            this.quanLySinhVienTableAdapter.Fill(this.phanMemDiemDanhDataSet.QuanLySinhVien);
+
         }
 
         private void bThem_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace FormChinh
             LayNguon(sql);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void phanMemDiemDanhDataSet11BindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }
