@@ -12,15 +12,20 @@ namespace FormChinh
 {
     public partial class frmQuenMK : Form
     {
-        public frmQuenMK()
+        private frmDangNhap frm;
+        public frmQuenMK(frmDangNhap frm)
         {
+            this.frm = frm;
             InitializeComponent();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmDangNhap frm = new frmDangNhap();
+        }
+
+        private void frmQuenMK_FormClosing(object sender, FormClosingEventArgs e)
+        {
             frm.Show();
         }
     }

@@ -13,6 +13,7 @@ namespace FormChinh
     public partial class frmDangNhap : Form
     {
         string sql;
+        DataTable dt;
         public frmDangNhap()
         {
             InitializeComponent();
@@ -29,13 +30,13 @@ namespace FormChinh
                 txtMK.Focus(); return;
             }
 
-            sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = '{txtTK.Text}' AND matKhau = '{txtMK.Text}'";
-
-            if (Public.LayDuLieu(sql).Rows.Count == 1)
+            sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = N'{txtTK.Text}' AND matKhau = N'{txtMK.Text}'";
+            dt = Public.LayDuLieu(sql);
+            if (dt.Rows.Count == 1)
             {
-                sql = $"SELECT chucVu from QuanLyTaiKhoan WHERE tenTaiKhoan = '{txtTK.Text}'";
+                sql = $"SELECT chucVu from QuanLyTaiKhoan WHERE tenTaiKhoan = N'{txtTK.Text}'";
                 this.Hide();
-                MDIForm frm = new MDIForm(this, txtTK.Text, Public.LayDuLieu(sql).Rows[0][0].ToString());
+                MDIForm frm = new MDIForm(this, txtTK.Text, dt.Rows[0][0].ToString());
                 frm.Show();
             }
             else MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Lỗi!");
@@ -49,7 +50,7 @@ namespace FormChinh
         private void LnkQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            frmQuenMK frm = new frmQuenMK();
+            frmQuenMK frm = new frmQuenMK(this);
             frm.Show();
         }
     }

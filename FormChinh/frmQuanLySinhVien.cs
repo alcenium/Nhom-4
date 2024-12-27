@@ -26,16 +26,14 @@ namespace FormChinh
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'phanMemDiemDanhDataSet.QuanLySinhVien' table. You can move, or remove it, as needed.
-            this.quanLySinhVienTableAdapter.Fill(this.phanMemDiemDanhDataSet.QuanLySinhVien);
-
+            LayNguon();
         }
 
         private void bThem_Click(object sender, EventArgs e)
         {
-            if (tbHoTen.Text == "" || tbLop.Text == "" || tbMaSinhVien.Text == "" || tbSoDienThoai.Text == "" || (!cbNam.Checked && !cbNu.Checked))
+            if (tbHoTen.Text == "" || tbLop.Text == "" || tbMaSinhVien.Text == "" || tbSoDienThoai.Text == "" || tbEmail.Text == "" || (!cbNam.Checked && !cbNu.Checked))
             {
-                MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin!", "Lỗi!");
+                MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             String gioiTinh = cbNam.Checked ? "M" : "F";
@@ -43,7 +41,7 @@ namespace FormChinh
             sql = $"SELECT * FROM QuanLySinhVien WHERE maSV = '{tbMaSinhVien.Text}'";
             if (Public.LayDuLieu(sql).Rows.Count > 0)
             {
-                MessageBox.Show("Sinh viên với mã đó đã tồn tại!", "Lỗi!");
+                MessageBox.Show("Sinh viên với mã đó đã tồn tại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -72,6 +70,7 @@ namespace FormChinh
                 tbLop.Text = row.Cells[3].Value.ToString();
                 dateNgaySinh.Text = row.Cells[4].Value.ToString();
                 tbSoDienThoai.Text = row.Cells[5].Value.ToString();
+                tbEmail.Text = row.Cells[6].Value.ToString();
                 switch (row.Cells[2].Value.ToString())
                 {
                     case "M":
@@ -104,9 +103,25 @@ namespace FormChinh
             LayNguon(sql);
         }
 
-        private void phanMemDiemDanhDataSet11BindingSource_CurrentChanged(object sender, EventArgs e)
+        private void bThoat_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void bSua_Click(object sender, EventArgs e)
+        {
+            sql = $"SELECT * FROM QuanLySinhVien WHERE maSV = '{tbMaSinhVien.Text}'";
+            if (Public.LayDuLieu(sql).Rows.Count != 1)
+            {
+                MessageBox.Show("Không có sinh viên với mã sinh viên tương ứng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (tbHoTen.Text == "" || tbLop.Text == "" || tbMaSinhVien.Text == "" || tbSoDienThoai.Text == "" || tbEmail.Text == "" || (!cbNam.Checked && !cbNu.Checked))
+            {
+                MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

@@ -26,8 +26,8 @@ namespace FormChinh
             switch (loaiTK)
             {
                 case "ql": tstbLoaiTaiKhoan.Text = "Quản lý"; break;
-                case "hs": tstbLoaiTaiKhoan.Text = "Học sinh"; break;
-                case "gv": tstbLoaiTaiKhoan.Text = "Giáo viên"; break;
+                case "sv": tstbLoaiTaiKhoan.Text = "Sinh viên"; break;
+                case "gv": tstbLoaiTaiKhoan.Text = "Giảng viên"; break;
             }
         }
 

@@ -33,15 +33,17 @@
             this.txtQuenMK = new System.Windows.Forms.TextBox();
             this.btnQuenMK = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 85);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(83, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 19);
+            this.label1.Size = new System.Drawing.Size(52, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
             // 
@@ -57,15 +59,16 @@
             // 
             // txtQuenMK
             // 
-            this.txtQuenMK.Location = new System.Drawing.Point(93, 87);
+            this.txtQuenMK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuenMK.Location = new System.Drawing.Point(144, 111);
             this.txtQuenMK.Name = "txtQuenMK";
-            this.txtQuenMK.Size = new System.Drawing.Size(356, 20);
+            this.txtQuenMK.Size = new System.Drawing.Size(305, 26);
             this.txtQuenMK.TabIndex = 2;
             // 
             // btnQuenMK
             // 
             this.btnQuenMK.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuenMK.Location = new System.Drawing.Point(34, 132);
+            this.btnQuenMK.Location = new System.Drawing.Point(34, 208);
             this.btnQuenMK.Name = "btnQuenMK";
             this.btnQuenMK.Size = new System.Drawing.Size(187, 43);
             this.btnQuenMK.TabIndex = 3;
@@ -75,7 +78,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(262, 132);
+            this.btnThoat.Location = new System.Drawing.Point(262, 208);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(187, 43);
             this.btnThoat.TabIndex = 4;
@@ -83,11 +86,31 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 18);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Tên tài khoản:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(144, 79);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(305, 26);
+            this.textBox1.TabIndex = 6;
+            // 
             // frmQuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 209);
+            this.ClientSize = new System.Drawing.Size(466, 286);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnQuenMK);
             this.Controls.Add(this.txtQuenMK);
@@ -95,6 +118,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmQuenMK";
             this.Text = "Quên mật khẩu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuenMK_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +131,7 @@
         private System.Windows.Forms.TextBox txtQuenMK;
         private System.Windows.Forms.Button btnQuenMK;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
