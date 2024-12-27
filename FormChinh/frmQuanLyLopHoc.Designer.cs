@@ -64,49 +64,53 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 330);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 299);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã Lớp:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 366);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 335);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.Size = new System.Drawing.Size(33, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Lớp:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(377, 366);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(355, 334);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(66, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Khoá học:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(377, 330);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(355, 298);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.Size = new System.Drawing.Size(50, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Ngành:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 327);
+            this.textBox1.Location = new System.Drawing.Point(91, 296);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(220, 20);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 364);
+            this.textBox2.Location = new System.Drawing.Point(91, 333);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(220, 20);
             this.textBox2.TabIndex = 6;
@@ -114,15 +118,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 406);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 375);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(48, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "GVCN:";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(93, 403);
+            this.textBox5.Location = new System.Drawing.Point(91, 372);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(220, 20);
             this.textBox5.TabIndex = 10;
@@ -130,9 +135,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.button1.Location = new System.Drawing.Point(380, 403);
+            this.button1.Location = new System.Drawing.Point(358, 364);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
+            this.button1.Size = new System.Drawing.Size(68, 27);
             this.button1.TabIndex = 11;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
@@ -140,9 +145,9 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.button2.Location = new System.Drawing.Point(569, 403);
+            this.button2.Location = new System.Drawing.Point(516, 364);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 37);
+            this.button2.Size = new System.Drawing.Size(66, 27);
             this.button2.TabIndex = 12;
             this.button2.Text = "Xoá";
             this.button2.UseVisualStyleBackColor = false;
@@ -161,7 +166,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(773, 241);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 241);
             this.dataGridView1.TabIndex = 14;
             // 
             // Column1
@@ -202,9 +207,9 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.button3.Location = new System.Drawing.Point(476, 403);
+            this.button3.Location = new System.Drawing.Point(437, 364);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 37);
+            this.button3.Size = new System.Drawing.Size(68, 27);
             this.button3.TabIndex = 15;
             this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = false;
@@ -212,9 +217,9 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.button4.Location = new System.Drawing.Point(658, 403);
+            this.button4.Location = new System.Drawing.Point(594, 364);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 37);
+            this.button4.Size = new System.Drawing.Size(68, 27);
             this.button4.TabIndex = 16;
             this.button4.Text = "Thoát";
             this.button4.UseVisualStyleBackColor = false;
@@ -223,7 +228,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(464, 363);
+            this.comboBox1.Location = new System.Drawing.Point(442, 331);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(220, 21);
             this.comboBox1.TabIndex = 17;
@@ -232,7 +237,7 @@
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(464, 327);
+            this.comboBox2.Location = new System.Drawing.Point(442, 295);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(220, 21);
             this.comboBox2.TabIndex = 18;
@@ -242,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(674, 410);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);

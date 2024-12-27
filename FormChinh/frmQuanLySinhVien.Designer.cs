@@ -73,10 +73,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(583, 9);
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(522, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 59);
+            this.label1.Size = new System.Drawing.Size(273, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ SINH VIÊN";
             // 
@@ -93,10 +93,10 @@
             this.dgNgaySinh,
             this.dgSoDienThoai,
             this.email});
-            this.dataGridView1.Location = new System.Drawing.Point(317, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(861, 402);
+            this.dataGridView1.Size = new System.Drawing.Size(893, 248);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -160,91 +160,102 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 132);
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 317);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 19);
+            this.label2.Size = new System.Drawing.Size(112, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã sinh viên:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 165);
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 350);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 19);
+            this.label3.Size = new System.Drawing.Size(66, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Họ tên:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 231);
+            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(341, 317);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 19);
+            this.label4.Size = new System.Drawing.Size(44, 23);
             this.label4.TabIndex = 4;
             this.label4.Text = "Lớp:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 298);
+            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(341, 384);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 19);
+            this.label5.Size = new System.Drawing.Size(90, 23);
             this.label5.TabIndex = 5;
             this.label5.Text = "Ngày sinh:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 198);
+            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 383);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 19);
+            this.label6.Size = new System.Drawing.Size(114, 23);
             this.label6.TabIndex = 6;
             this.label6.Text = "Số điện thoại:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 322);
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(671, 313);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 19);
+            this.label7.Size = new System.Drawing.Size(81, 23);
             this.label7.TabIndex = 7;
             this.label7.Text = "Giới tính:";
             // 
             // tbMaSinhVien
             // 
-            this.tbMaSinhVien.Location = new System.Drawing.Point(109, 129);
+            this.tbMaSinhVien.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMaSinhVien.Location = new System.Drawing.Point(130, 314);
             this.tbMaSinhVien.Name = "tbMaSinhVien";
-            this.tbMaSinhVien.Size = new System.Drawing.Size(191, 27);
+            this.tbMaSinhVien.Size = new System.Drawing.Size(191, 26);
             this.tbMaSinhVien.TabIndex = 0;
             // 
             // tbHoTen
             // 
-            this.tbHoTen.Location = new System.Drawing.Point(109, 162);
+            this.tbHoTen.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHoTen.Location = new System.Drawing.Point(132, 348);
             this.tbHoTen.Name = "tbHoTen";
-            this.tbHoTen.Size = new System.Drawing.Size(191, 27);
+            this.tbHoTen.Size = new System.Drawing.Size(191, 26);
             this.tbHoTen.TabIndex = 1;
             // 
             // tbLop
             // 
-            this.tbLop.Location = new System.Drawing.Point(109, 228);
+            this.tbLop.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLop.Location = new System.Drawing.Point(443, 314);
             this.tbLop.Name = "tbLop";
-            this.tbLop.Size = new System.Drawing.Size(191, 27);
+            this.tbLop.Size = new System.Drawing.Size(191, 26);
             this.tbLop.TabIndex = 3;
             // 
             // tbSoDienThoai
             // 
-            this.tbSoDienThoai.Location = new System.Drawing.Point(109, 195);
+            this.tbSoDienThoai.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSoDienThoai.Location = new System.Drawing.Point(132, 380);
             this.tbSoDienThoai.Name = "tbSoDienThoai";
-            this.tbSoDienThoai.Size = new System.Drawing.Size(191, 27);
+            this.tbSoDienThoai.Size = new System.Drawing.Size(191, 26);
             this.tbSoDienThoai.TabIndex = 2;
             // 
             // cbNam
             // 
             this.cbNam.AutoSize = true;
-            this.cbNam.Location = new System.Drawing.Point(109, 321);
+            this.cbNam.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNam.Location = new System.Drawing.Point(773, 312);
             this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(58, 23);
+            this.cbNam.Size = new System.Drawing.Size(65, 27);
             this.cbNam.TabIndex = 6;
             this.cbNam.Text = "Nam";
             this.cbNam.UseVisualStyleBackColor = true;
@@ -253,9 +264,10 @@
             // cbNu
             // 
             this.cbNu.AutoSize = true;
-            this.cbNu.Location = new System.Drawing.Point(173, 321);
+            this.cbNu.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNu.Location = new System.Drawing.Point(844, 312);
             this.cbNu.Name = "cbNu";
-            this.cbNu.Size = new System.Drawing.Size(48, 23);
+            this.cbNu.Size = new System.Drawing.Size(52, 27);
             this.cbNu.TabIndex = 7;
             this.cbNu.Text = "Nữ";
             this.cbNu.UseVisualStyleBackColor = true;
@@ -291,7 +303,7 @@
             // bThem
             // 
             this.bThem.AutoSize = true;
-            this.bThem.Location = new System.Drawing.Point(12, 374);
+            this.bThem.Location = new System.Drawing.Point(676, 345);
             this.bThem.Name = "bThem";
             this.bThem.Size = new System.Drawing.Size(91, 29);
             this.bThem.TabIndex = 8;
@@ -302,7 +314,7 @@
             // bXoa
             // 
             this.bXoa.AutoSize = true;
-            this.bXoa.Location = new System.Drawing.Point(209, 374);
+            this.bXoa.Location = new System.Drawing.Point(676, 380);
             this.bXoa.Name = "bXoa";
             this.bXoa.Size = new System.Drawing.Size(91, 29);
             this.bXoa.TabIndex = 10;
@@ -313,32 +325,35 @@
             // dateNgaySinh
             // 
             this.dateNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dateNgaySinh.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgaySinh.Location = new System.Drawing.Point(109, 292);
+            this.dateNgaySinh.Location = new System.Drawing.Point(443, 381);
             this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Size = new System.Drawing.Size(191, 27);
+            this.dateNgaySinh.Size = new System.Drawing.Size(191, 26);
             this.dateNgaySinh.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 267);
+            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(341, 353);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 19);
+            this.label9.Size = new System.Drawing.Size(56, 23);
             this.label9.TabIndex = 23;
             this.label9.Text = "Email:";
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(109, 259);
+            this.tbEmail.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Location = new System.Drawing.Point(443, 348);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(191, 27);
+            this.tbEmail.Size = new System.Drawing.Size(191, 26);
             this.tbEmail.TabIndex = 4;
             // 
             // bSua
             // 
             this.bSua.AutoSize = true;
-            this.bSua.Location = new System.Drawing.Point(109, 374);
+            this.bSua.Location = new System.Drawing.Point(773, 345);
             this.bSua.Name = "bSua";
             this.bSua.Size = new System.Drawing.Size(91, 29);
             this.bSua.TabIndex = 24;
@@ -348,7 +363,7 @@
             // button2
             // 
             this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(161, 409);
+            this.button2.Location = new System.Drawing.Point(773, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 29);
             this.button2.TabIndex = 25;
@@ -378,7 +393,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 490);
+            this.ClientSize = new System.Drawing.Size(914, 428);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bSua);
             this.Controls.Add(this.tbEmail);
