@@ -13,9 +13,7 @@ namespace FormChinh
 {
     public partial class frmDangNhap : Form
     {
-        SqlConnection conn;
-        SqlDataAdapter daDangNhap;
-        DataTable dtDangNhap;
+        DataTable dt;
         string sql = "";
         public frmDangNhap()
         {
