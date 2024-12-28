@@ -33,5 +33,16 @@ namespace FormChinh.Properties {
                 return ((string)(this["HungConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Tru" +
+            "stServerCertificate=True")]
+        public string HungDiemDanhConnectionString {
+            get {
+                return ((string)(this["HungDiemDanhConnectionString"]));
+            }
+        }
     }
 }
