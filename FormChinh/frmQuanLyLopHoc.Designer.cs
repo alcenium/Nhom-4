@@ -58,7 +58,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(491, 6);
+            this.label1.Location = new System.Drawing.Point(571, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 31);
@@ -154,6 +154,7 @@
             this.cmdThem.TabIndex = 11;
             this.cmdThem.Text = "Thêm";
             this.cmdThem.UseVisualStyleBackColor = false;
+            this.cmdThem.Click += new System.EventHandler(this.cmdThem_Click);
             // 
             // cmdXoa
             // 
@@ -165,6 +166,7 @@
             this.cmdXoa.TabIndex = 12;
             this.cmdXoa.Text = "Xoá";
             this.cmdXoa.UseVisualStyleBackColor = false;
+            this.cmdXoa.Click += new System.EventHandler(this.cmdXoa_Click);
             // 
             // dgDanhMuc
             // 
@@ -183,6 +185,7 @@
             this.dgDanhMuc.ReadOnly = true;
             this.dgDanhMuc.Size = new System.Drawing.Size(758, 237);
             this.dgDanhMuc.TabIndex = 14;
+            this.dgDanhMuc.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgDanhMuc_CellMouseClick);
             // 
             // cmdSua
             // 
@@ -194,6 +197,7 @@
             this.cmdSua.TabIndex = 15;
             this.cmdSua.Text = "Sửa";
             this.cmdSua.UseVisualStyleBackColor = false;
+            this.cmdSua.Click += new System.EventHandler(this.cmdSua_Click);
             // 
             // cmdThoat
             // 
@@ -257,7 +261,7 @@
             this.cmdToanBo.Name = "cmdToanBo";
             this.cmdToanBo.Size = new System.Drawing.Size(103, 27);
             this.cmdToanBo.TabIndex = 21;
-            this.cmdToanBo.Text = "Hiện Toàn Bộ";
+            this.cmdToanBo.Text = "Hiện Tất Cả";
             this.cmdToanBo.UseVisualStyleBackColor = false;
             this.cmdToanBo.Click += new System.EventHandler(this.cmdToanBo_Click);
             // 

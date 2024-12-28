@@ -20,10 +20,10 @@ namespace FormChinh
 
         public static SqlConnection ketNoi()
         {
-            //string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            //string connString = "Data Source=LAPTOP-N5BUPLIL;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = @"Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = @"Data Source=LAPTOP-N5BUPLIL;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             string connString = @"Data Source=DESKTOP-1FODL3G\USTEAM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            //string connString = "Data Source=LTANH59\\MSSQLSERVER01;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = @"Data Source=LTANH59\\MSSQLSERVER01;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             conn = new SqlConnection(connString);
             return conn;
         }
