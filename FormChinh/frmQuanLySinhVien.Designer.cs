@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dgMaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgHoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,14 +52,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.bSua = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.phanMemDiemDanhDataSet = new FormChinh.phanMemDiemDanhDataSet();
-            this.phanMemDiemDanhDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bThoat = new System.Windows.Forms.Button();
+            this.hungDataSet = new FormChinh.HungDataSet();
             this.quanLySinhVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLySinhVienTableAdapter = new FormChinh.phanMemDiemDanhDataSetTableAdapters.QuanLySinhVienTableAdapter();
+            this.dgMaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgHoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phanMemDiemDanhDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phanMemDiemDanhDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hungDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLySinhVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +88,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgMaSinhVien,
@@ -92,70 +97,21 @@
             this.dgGioiTinh,
             this.dgNgaySinh,
             this.dgSoDienThoai,
-            this.email});
+            this.email,
+            this.maSVDataGridViewTextBoxColumn,
+            this.hoTenDataGridViewTextBoxColumn,
+            this.ngaySinhDataGridViewTextBoxColumn,
+            this.maLopDataGridViewTextBoxColumn,
+            this.gioiTinhDataGridViewTextBoxColumn,
+            this.sdtDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.quanLySinhVienBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(893, 248);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // dgMaSinhVien
-            // 
-            this.dgMaSinhVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgMaSinhVien.DataPropertyName = "maSV";
-            this.dgMaSinhVien.DividerWidth = 1;
-            this.dgMaSinhVien.HeaderText = "Mã sinh viên";
-            this.dgMaSinhVien.Name = "dgMaSinhVien";
-            this.dgMaSinhVien.ReadOnly = true;
-            // 
-            // dgHoVaTen
-            // 
-            this.dgHoVaTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgHoVaTen.DataPropertyName = "hoTen";
-            this.dgHoVaTen.HeaderText = "Họ và tên";
-            this.dgHoVaTen.Name = "dgHoVaTen";
-            this.dgHoVaTen.ReadOnly = true;
-            // 
-            // dgLop
-            // 
-            this.dgLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgLop.DataPropertyName = "maLop";
-            this.dgLop.HeaderText = "Lớp";
-            this.dgLop.Name = "dgLop";
-            this.dgLop.ReadOnly = true;
-            // 
-            // dgGioiTinh
-            // 
-            this.dgGioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgGioiTinh.DataPropertyName = "gioiTinh";
-            this.dgGioiTinh.HeaderText = "Giới tính";
-            this.dgGioiTinh.Name = "dgGioiTinh";
-            this.dgGioiTinh.ReadOnly = true;
-            // 
-            // dgNgaySinh
-            // 
-            this.dgNgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgNgaySinh.DataPropertyName = "ngaySinh";
-            this.dgNgaySinh.HeaderText = "Ngày sinh";
-            this.dgNgaySinh.Name = "dgNgaySinh";
-            this.dgNgaySinh.ReadOnly = true;
-            // 
-            // dgSoDienThoai
-            // 
-            this.dgSoDienThoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgSoDienThoai.DataPropertyName = "sdt";
-            this.dgSoDienThoai.HeaderText = "Số điện thoại";
-            this.dgSoDienThoai.Name = "dgSoDienThoai";
-            this.dgSoDienThoai.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // label2
             // 
@@ -220,7 +176,7 @@
             // tbMaSinhVien
             // 
             this.tbMaSinhVien.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMaSinhVien.Location = new System.Drawing.Point(130, 314);
+            this.tbMaSinhVien.Location = new System.Drawing.Point(132, 314);
             this.tbMaSinhVien.Name = "tbMaSinhVien";
             this.tbMaSinhVien.Size = new System.Drawing.Size(191, 26);
             this.tbMaSinhVien.TabIndex = 0;
@@ -359,42 +315,149 @@
             this.bSua.TabIndex = 24;
             this.bSua.Text = "Sửa";
             this.bSua.UseVisualStyleBackColor = true;
+            this.bSua.Click += new System.EventHandler(this.bSua_Click);
             // 
-            // button2
+            // bThoat
             // 
-            this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(773, 379);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 29);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bThoat.AutoSize = true;
+            this.bThoat.Location = new System.Drawing.Point(773, 379);
+            this.bThoat.Name = "bThoat";
+            this.bThoat.Size = new System.Drawing.Size(91, 29);
+            this.bThoat.TabIndex = 25;
+            this.bThoat.Text = "Thoát";
+            this.bThoat.UseVisualStyleBackColor = true;
+            this.bThoat.Click += new System.EventHandler(this.bThoat_Click);
             // 
-            // phanMemDiemDanhDataSet
+            // hungDataSet
             // 
-            this.phanMemDiemDanhDataSet.DataSetName = "phanMemDiemDanhDataSet";
-            this.phanMemDiemDanhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // phanMemDiemDanhDataSetBindingSource
-            // 
-            this.phanMemDiemDanhDataSetBindingSource.DataSource = this.phanMemDiemDanhDataSet;
-            this.phanMemDiemDanhDataSetBindingSource.Position = 0;
+            this.hungDataSet.DataSetName = "phanMemDiemDanhDataSet";
+            this.hungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // quanLySinhVienBindingSource
             // 
             this.quanLySinhVienBindingSource.DataMember = "QuanLySinhVien";
-            this.quanLySinhVienBindingSource.DataSource = this.phanMemDiemDanhDataSetBindingSource;
+            this.quanLySinhVienBindingSource.DataSource = this.hungDataSet;
             // 
-            // quanLySinhVienTableAdapter
+            // dgMaSinhVien
             // 
-            this.quanLySinhVienTableAdapter.ClearBeforeFill = true;
+            this.dgMaSinhVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgMaSinhVien.DataPropertyName = "maSV";
+            this.dgMaSinhVien.DividerWidth = 1;
+            this.dgMaSinhVien.HeaderText = "Mã sinh viên";
+            this.dgMaSinhVien.Name = "dgMaSinhVien";
+            this.dgMaSinhVien.ReadOnly = true;
+            // 
+            // dgHoVaTen
+            // 
+            this.dgHoVaTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgHoVaTen.DataPropertyName = "hoTen";
+            this.dgHoVaTen.HeaderText = "Họ và tên";
+            this.dgHoVaTen.Name = "dgHoVaTen";
+            this.dgHoVaTen.ReadOnly = true;
+            // 
+            // dgLop
+            // 
+            this.dgLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgLop.DataPropertyName = "maLop";
+            this.dgLop.HeaderText = "Lớp";
+            this.dgLop.Name = "dgLop";
+            this.dgLop.ReadOnly = true;
+            // 
+            // dgGioiTinh
+            // 
+            this.dgGioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgGioiTinh.DataPropertyName = "gioiTinh";
+            this.dgGioiTinh.HeaderText = "Giới tính";
+            this.dgGioiTinh.Name = "dgGioiTinh";
+            this.dgGioiTinh.ReadOnly = true;
+            // 
+            // dgNgaySinh
+            // 
+            this.dgNgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgNgaySinh.DataPropertyName = "ngaySinh";
+            this.dgNgaySinh.HeaderText = "Ngày sinh";
+            this.dgNgaySinh.Name = "dgNgaySinh";
+            this.dgNgaySinh.ReadOnly = true;
+            // 
+            // dgSoDienThoai
+            // 
+            this.dgSoDienThoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgSoDienThoai.DataPropertyName = "sdt";
+            this.dgSoDienThoai.HeaderText = "Số điện thoại";
+            this.dgSoDienThoai.Name = "dgSoDienThoai";
+            this.dgSoDienThoai.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Visible = false;
+            // 
+            // maSVDataGridViewTextBoxColumn
+            // 
+            this.maSVDataGridViewTextBoxColumn.DataPropertyName = "maSV";
+            this.maSVDataGridViewTextBoxColumn.HeaderText = "maSV";
+            this.maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
+            this.maSVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maSVDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "hoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "hoTen";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hoTenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "ngaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "ngaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ngaySinhDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // maLopDataGridViewTextBoxColumn
+            // 
+            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "maLop";
+            this.maLopDataGridViewTextBoxColumn.HeaderText = "maLop";
+            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
+            this.maLopDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maLopDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // gioiTinhDataGridViewTextBoxColumn
+            // 
+            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "gioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "gioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            this.gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gioiTinhDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sdtDataGridViewTextBoxColumn
+            // 
+            this.sdtDataGridViewTextBoxColumn.DataPropertyName = "sdt";
+            this.sdtDataGridViewTextBoxColumn.HeaderText = "sdt";
+            this.sdtDataGridViewTextBoxColumn.Name = "sdtDataGridViewTextBoxColumn";
+            this.sdtDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sdtDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmQuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 428);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bThoat);
             this.Controls.Add(this.bSua);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label9);
@@ -424,8 +487,7 @@
             this.Text = "Quản Lý Sinh Viên";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phanMemDiemDanhDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phanMemDiemDanhDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hungDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLySinhVienBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -457,7 +519,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Button bSua;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgMaSinhVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgHoVaTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgLop;
@@ -465,10 +527,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgNgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgSoDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private phanMemDiemDanhDataSet phanMemDiemDanhDataSet;
-        private System.Windows.Forms.BindingSource phanMemDiemDanhDataSetBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource quanLySinhVienBindingSource;
-        private phanMemDiemDanhDataSetTableAdapters.QuanLySinhVienTableAdapter quanLySinhVienTableAdapter;
+        private HungDataSet hungDataSet;
     }
 }
 
