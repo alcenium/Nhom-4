@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgSinhVien = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,7 +38,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbMaSinhVien = new System.Windows.Forms.TextBox();
             this.tbHoTen = new System.Windows.Forms.TextBox();
-            this.tbLop = new System.Windows.Forms.TextBox();
             this.tbSoDienThoai = new System.Windows.Forms.TextBox();
             this.cbNam = new System.Windows.Forms.CheckBox();
             this.cbNu = new System.Windows.Forms.CheckBox();
@@ -59,15 +57,9 @@
             this.dgGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbLop = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,33 +72,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ SINH VIÊN";
             // 
-            // dataGridView1
+            // dgSinhVien
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgSinhVien.AllowUserToAddRows = false;
+            this.dgSinhVien.AllowUserToDeleteRows = false;
+            this.dgSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgMaSinhVien,
             this.dgHoVaTen,
             this.dgLop,
             this.dgGioiTinh,
             this.dgNgaySinh,
             this.dgSoDienThoai,
-            this.email,
-            this.maSVDataGridViewTextBoxColumn,
-            this.hoTenDataGridViewTextBoxColumn,
-            this.ngaySinhDataGridViewTextBoxColumn,
-            this.maLopDataGridViewTextBoxColumn,
-            this.gioiTinhDataGridViewTextBoxColumn,
-            this.sdtDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(893, 248);
-            this.dataGridView1.TabIndex = 11;
-            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.Column1});
+            this.dgSinhVien.Location = new System.Drawing.Point(12, 45);
+            this.dgSinhVien.Name = "dgSinhVien";
+            this.dgSinhVien.ReadOnly = true;
+            this.dgSinhVien.Size = new System.Drawing.Size(893, 248);
+            this.dgSinhVien.TabIndex = 11;
+            this.dgSinhVien.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // label2
             // 
@@ -183,14 +167,6 @@
             this.tbHoTen.Name = "tbHoTen";
             this.tbHoTen.Size = new System.Drawing.Size(191, 26);
             this.tbHoTen.TabIndex = 1;
-            // 
-            // tbLop
-            // 
-            this.tbLop.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLop.Location = new System.Drawing.Point(443, 314);
-            this.tbLop.Name = "tbLop";
-            this.tbLop.Size = new System.Drawing.Size(191, 26);
-            this.tbLop.TabIndex = 3;
             // 
             // tbSoDienThoai
             // 
@@ -336,7 +312,7 @@
             // 
             this.dgHoVaTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dgHoVaTen.DataPropertyName = "hoTen";
-            this.dgHoVaTen.HeaderText = "Họ và tên";
+            this.dgHoVaTen.HeaderText = "Họ tên";
             this.dgHoVaTen.Name = "dgHoVaTen";
             this.dgHoVaTen.ReadOnly = true;
             // 
@@ -367,81 +343,33 @@
             // dgSoDienThoai
             // 
             this.dgSoDienThoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgSoDienThoai.DataPropertyName = "sdt";
+            this.dgSoDienThoai.DataPropertyName = "SDT";
             this.dgSoDienThoai.HeaderText = "Số điện thoại";
             this.dgSoDienThoai.Name = "dgSoDienThoai";
             this.dgSoDienThoai.ReadOnly = true;
             // 
-            // email
+            // Column1
             // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Visible = false;
+            this.Column1.DataPropertyName = "email";
+            this.Column1.HeaderText = "Email";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // maSVDataGridViewTextBoxColumn
+            // tbLop
             // 
-            this.maSVDataGridViewTextBoxColumn.DataPropertyName = "maSV";
-            this.maSVDataGridViewTextBoxColumn.HeaderText = "maSV";
-            this.maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
-            this.maSVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maSVDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "hoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "hoTen";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoTenDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "ngaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "ngaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ngaySinhDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // maLopDataGridViewTextBoxColumn
-            // 
-            this.maLopDataGridViewTextBoxColumn.DataPropertyName = "maLop";
-            this.maLopDataGridViewTextBoxColumn.HeaderText = "maLop";
-            this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
-            this.maLopDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maLopDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // gioiTinhDataGridViewTextBoxColumn
-            // 
-            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "gioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "gioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
-            this.gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gioiTinhDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sdtDataGridViewTextBoxColumn
-            // 
-            this.sdtDataGridViewTextBoxColumn.DataPropertyName = "sdt";
-            this.sdtDataGridViewTextBoxColumn.HeaderText = "sdt";
-            this.sdtDataGridViewTextBoxColumn.Name = "sdtDataGridViewTextBoxColumn";
-            this.sdtDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sdtDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Visible = false;
+            this.tbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbLop.FormattingEnabled = true;
+            this.tbLop.Location = new System.Drawing.Point(443, 313);
+            this.tbLop.Name = "tbLop";
+            this.tbLop.Size = new System.Drawing.Size(191, 27);
+            this.tbLop.TabIndex = 26;
             // 
             // frmQuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 428);
+            this.Controls.Add(this.tbLop);
             this.Controls.Add(this.bThoat);
             this.Controls.Add(this.bSua);
             this.Controls.Add(this.tbEmail);
@@ -455,7 +383,6 @@
             this.Controls.Add(this.cbNu);
             this.Controls.Add(this.cbNam);
             this.Controls.Add(this.tbSoDienThoai);
-            this.Controls.Add(this.tbLop);
             this.Controls.Add(this.tbHoTen);
             this.Controls.Add(this.tbMaSinhVien);
             this.Controls.Add(this.label7);
@@ -464,14 +391,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgSinhVien);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLySinhVien";
             this.Text = "Quản Lý Sinh Viên";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,7 +407,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgSinhVien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -489,7 +416,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbMaSinhVien;
         private System.Windows.Forms.TextBox tbHoTen;
-        private System.Windows.Forms.TextBox tbLop;
         private System.Windows.Forms.TextBox tbSoDienThoai;
         private System.Windows.Forms.CheckBox cbNam;
         private System.Windows.Forms.CheckBox cbNu;
@@ -503,13 +429,6 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Button bSua;
         private System.Windows.Forms.Button bThoat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgMaSinhVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgHoVaTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgGioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgNgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgSoDienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
@@ -517,6 +436,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgMaSinhVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgHoVaTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgGioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgNgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.ComboBox tbLop;
     }
 }
 

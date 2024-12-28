@@ -13,19 +13,18 @@ namespace FormChinh
 {
     internal class Public
     {
-        public static string sql, TenDN, MatKhau, HoTen;
         public static SqlConnection conn;
         public static SqlCommand cmd;
-
+        static string sql;
 
 
         public static SqlConnection ketNoi()
         {
-            string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             //string connString = "Data Source=LAPTOP-N5BUPLIL;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            //string connString = @"Data Source=DESKTOP-1FODL3G\USTEAM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            string connString = @"Data Source=DESKTOP-1FODL3G\USTEAM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             //string connString = "Data Source=LTANH59\\MSSQLSERVER01;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            SqlConnection conn = new SqlConnection(connString);
+            conn = new SqlConnection(connString);
             return conn;
         }
 
@@ -43,9 +42,13 @@ namespace FormChinh
                 cmd = new SqlCommand(sql, ketNoi());
                 if (conn.State != ConnectionState.Open) conn.Open();
                 cmd.ExecuteNonQuery();
+                conn.Close();
                 return true;
             }
-            catch (Exception ex) { Console.WriteLine("Error : " + ex.Message.ToString()); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thực hiện truy vấn: " + ex.Message.ToString(), "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return false;
         }
         public static void GanNguonDataGridView(DataGridView dgName, string sql)

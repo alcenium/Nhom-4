@@ -21,6 +21,11 @@ namespace FormChinh
 
         private void frmQuanLyLopHoc_Load(object sender, EventArgs e)
         {
+ 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -13,8 +13,8 @@ namespace FormChinh
 {
     public partial class frmDangNhap : Form
     {
-        DataTable dt;
-        string sql = "";
+        string sql;
+        DataTable dtDangNhap;
         public frmDangNhap()
         {
             InitializeComponent();
@@ -32,11 +32,11 @@ namespace FormChinh
             }
 
             sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = '{txtTK.Text}' AND matKhau = '{txtMK.Text}'";
-            dt = Public.LayDuLieu(sql);
-            if (dt.Rows.Count == 1)
+            dtDangNhap = Public.LayDuLieu(sql);
+            if (dtDangNhap.Rows.Count == 1)
             {
                 this.Hide();
-                MDIForm frm = new MDIForm(this, txtTK.Text, dt.Rows[0][2].ToString());
+                MDIForm frm = new MDIForm(this, txtTK.Text, dtDangNhap.Rows[0][2].ToString());
                 frm.Show();
             }
             else MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Lỗi!");
