@@ -33,13 +33,12 @@ namespace FormChinh
                 txtMK.Focus(); return;
             }
 
-            sql = $"SELECT * FROM DiemDanh WHERE tenTaiKhoan = N'{txtTK.Text}' AND matKhau = N'{txtMK.Text}'";
+            sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = '{txtTK.Text}' AND matKhau = '{txtMK.Text}'";
             dt = Public.LayDuLieu(sql);
             if (dt.Rows.Count == 1)
             {
-                sql = $"SELECT chucVu from DiemDanh WHERE tenTaiKhoan = N'{txtTK.Text}'";
                 this.Hide();
-                MDIForm frm = new MDIForm(this, txtTK.Text, dt.Rows[0][0].ToString());
+                MDIForm frm = new MDIForm(this, txtTK.Text, dt.Rows[0][2].ToString());
                 frm.Show();
             }
             else MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Lỗi!");
