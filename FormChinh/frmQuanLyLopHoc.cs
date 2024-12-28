@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace FormChinh
 {
@@ -16,6 +17,11 @@ namespace FormChinh
         public frmQuanLyLopHoc()
         {
             InitializeComponent();
+        }
+
+        private void frmQuanLyLopHoc_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

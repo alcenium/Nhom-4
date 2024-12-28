@@ -38,12 +38,12 @@
             this.tsmiTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.tstbTenTaiKhoan = new System.Windows.Forms.ToolStripTextBox();
             this.tstbLoaiTaiKhoan = new System.Windows.Forms.ToolStripTextBox();
-            this.tsmiDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiDangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiKetThuc = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuQlyTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiKetThuc = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,8 @@
             this.tsmiTaiKhoan});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(598, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(698, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,36 +134,10 @@
             this.tstbLoaiTaiKhoan.Name = "tstbLoaiTaiKhoan";
             this.tstbLoaiTaiKhoan.Size = new System.Drawing.Size(100, 23);
             // 
-            // tsmiDoiMatKhau
-            // 
-            this.tsmiDoiMatKhau.Name = "tsmiDoiMatKhau";
-            this.tsmiDoiMatKhau.Size = new System.Drawing.Size(180, 22);
-            this.tsmiDoiMatKhau.Text = "Đổi mật khẩu";
-            this.tsmiDoiMatKhau.Click += new System.EventHandler(this.tsmiDoiMatKhau_Click);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // tsmiDangXuat
-            // 
-            this.tsmiDangXuat.Name = "tsmiDangXuat";
-            this.tsmiDangXuat.Size = new System.Drawing.Size(180, 22);
-            this.tsmiDangXuat.Text = "Đăng xuất";
-            this.tsmiDangXuat.Click += new System.EventHandler(this.tsmiDangXuat_Click);
-            // 
-            // tsmiKetThuc
-            // 
-            this.tsmiKetThuc.Name = "tsmiKetThuc";
-            this.tsmiKetThuc.Size = new System.Drawing.Size(180, 22);
-            this.tsmiKetThuc.Text = "Kết thúc";
-            this.tsmiKetThuc.Click += new System.EventHandler(this.tsmiKetThuc_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // mnuQlyTaiKhoan
             // 
@@ -171,16 +146,48 @@
             this.mnuQlyTaiKhoan.Text = "Quản Lý Tài Khoản";
             this.mnuQlyTaiKhoan.Click += new System.EventHandler(this.mnuQlyTaiKhoan_Click);
             // 
+            // tsmiDoiMatKhau
+            // 
+            this.tsmiDoiMatKhau.Name = "tsmiDoiMatKhau";
+            this.tsmiDoiMatKhau.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDoiMatKhau.Text = "Đổi mật khẩu";
+            this.tsmiDoiMatKhau.Click += new System.EventHandler(this.tsmiDoiMatKhau_Click);
+            // 
+            // tsmiDangXuat
+            // 
+            this.tsmiDangXuat.Name = "tsmiDangXuat";
+            this.tsmiDangXuat.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDangXuat.Text = "Đăng xuất";
+            this.tsmiDangXuat.Click += new System.EventHandler(this.tsmiDangXuat_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsmiKetThuc
+            // 
+            this.tsmiKetThuc.Name = "tsmiKetThuc";
+            this.tsmiKetThuc.Size = new System.Drawing.Size(180, 22);
+            this.tsmiKetThuc.Text = "Kết thúc";
+            this.tsmiKetThuc.Click += new System.EventHandler(this.tsmiKetThuc_Click);
+            // 
             // MDIForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(598, 285);
+            this.ClientSize = new System.Drawing.Size(698, 285);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MDIForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm Điểm danh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MDIForm_FormClosing);
