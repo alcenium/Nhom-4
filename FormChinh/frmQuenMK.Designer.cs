@@ -41,7 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 114);
+            this.label1.Location = new System.Drawing.Point(11, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 18);
             this.label1.TabIndex = 0;
@@ -94,12 +94,12 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 18);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Tên tài khoản:";
+            this.label3.Text = "Mã Sinh Viên:";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(125, 60);
+            this.textBox1.Location = new System.Drawing.Point(125, 57);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(256, 26);
             this.textBox1.TabIndex = 6;
@@ -122,7 +122,6 @@
             this.Name = "frmQuenMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quên mật khẩu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuenMK_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

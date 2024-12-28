@@ -22,10 +22,7 @@ namespace FormChinh
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void frmQuenMK_FormClosing(object sender, FormClosingEventArgs e)
-        {
+            frmDangNhap frm = new frmDangNhap();
             frm.Show();
         }
     }
