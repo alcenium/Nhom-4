@@ -116,7 +116,11 @@
             this.Controls.Add(this.txtQuenMK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmQuenMK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quên mật khẩu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuenMK_FormClosing);
             this.ResumeLayout(false);

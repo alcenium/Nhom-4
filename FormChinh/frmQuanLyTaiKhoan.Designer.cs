@@ -33,6 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,10 +44,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.MSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -104,6 +104,33 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(533, 163);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // MSV
+            // 
+            this.MSV.HeaderText = "MSV";
+            this.MSV.Name = "MSV";
+            this.MSV.ReadOnly = true;
+            // 
+            // Hoten
+            // 
+            this.Hoten.HeaderText = "Họ Tên";
+            this.Hoten.Name = "Hoten";
+            this.Hoten.ReadOnly = true;
+            this.Hoten.Width = 180;
+            // 
+            // lop
+            // 
+            this.lop.HeaderText = "Lớp";
+            this.lop.Name = "lop";
+            this.lop.ReadOnly = true;
+            this.lop.Width = 120;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ngành";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 90;
             // 
             // button1
             // 
@@ -166,33 +193,6 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Chuyên Ngành:";
             // 
-            // MSV
-            // 
-            this.MSV.HeaderText = "MSV";
-            this.MSV.Name = "MSV";
-            this.MSV.ReadOnly = true;
-            // 
-            // Hoten
-            // 
-            this.Hoten.HeaderText = "Họ Tên";
-            this.Hoten.Name = "Hoten";
-            this.Hoten.ReadOnly = true;
-            this.Hoten.Width = 180;
-            // 
-            // lop
-            // 
-            this.lop.HeaderText = "Lớp";
-            this.lop.Name = "lop";
-            this.lop.ReadOnly = true;
-            this.lop.Width = 120;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Ngành";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 90;
-            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -231,7 +231,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmQuanLyTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Tài Khoản";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

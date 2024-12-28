@@ -42,7 +42,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 68);
+            this.label1.Location = new System.Drawing.Point(40, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 23);
             this.label1.TabIndex = 2;
@@ -52,7 +53,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 119);
+            this.label2.Location = new System.Drawing.Point(40, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 23);
             this.label2.TabIndex = 3;
@@ -61,30 +63,30 @@
             // txtTK
             // 
             this.txtTK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Location = new System.Drawing.Point(155, 68);
-            this.txtTK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTK.Location = new System.Drawing.Point(177, 64);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(241, 27);
+            this.txtTK.Size = new System.Drawing.Size(275, 27);
             this.txtTK.TabIndex = 4;
             this.txtTK.Text = "ad";
             // 
             // txtMK
             // 
             this.txtMK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(155, 119);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMK.Location = new System.Drawing.Point(177, 112);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
-            this.txtMK.Size = new System.Drawing.Size(241, 27);
+            this.txtMK.Size = new System.Drawing.Size(275, 27);
             this.txtMK.TabIndex = 5;
             this.txtMK.Text = "1";
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(155, 168);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDangNhap.Location = new System.Drawing.Point(177, 158);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(113, 38);
+            this.btnDangNhap.Size = new System.Drawing.Size(129, 36);
             this.btnDangNhap.TabIndex = 6;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
@@ -93,9 +95,10 @@
             // LnkQuenMK
             // 
             this.LnkQuenMK.AutoSize = true;
-            this.LnkQuenMK.Location = new System.Drawing.Point(300, 147);
+            this.LnkQuenMK.Location = new System.Drawing.Point(343, 139);
+            this.LnkQuenMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LnkQuenMK.Name = "LnkQuenMK";
-            this.LnkQuenMK.Size = new System.Drawing.Size(96, 17);
+            this.LnkQuenMK.Size = new System.Drawing.Size(108, 16);
             this.LnkQuenMK.TabIndex = 8;
             this.LnkQuenMK.TabStop = true;
             this.LnkQuenMK.Text = "Quên Mật Khẩu";
@@ -103,10 +106,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(283, 168);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThoat.Location = new System.Drawing.Point(324, 158);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(113, 38);
+            this.btnThoat.Size = new System.Drawing.Size(129, 36);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -116,7 +119,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(197, 9);
+            this.label3.Location = new System.Drawing.Point(225, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 33);
             this.label3.TabIndex = 9;
@@ -125,10 +129,10 @@
             // frmDangNhap
             // 
             this.AcceptButton = this.btnDangNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(452, 241);
+            this.ClientSize = new System.Drawing.Size(516, 227);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LnkQuenMK);
             this.Controls.Add(this.btnThoat);
@@ -137,9 +141,13 @@
             this.Controls.Add(this.txtTK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();

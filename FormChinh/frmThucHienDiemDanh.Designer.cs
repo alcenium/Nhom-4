@@ -179,7 +179,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmThucHienDiemDanh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thực Hiện Điểm Danh";
             this.Load += new System.EventHandler(this.frmThucHienDiemDanh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
