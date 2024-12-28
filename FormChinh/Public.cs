@@ -18,9 +18,9 @@ namespace FormChinh
 
         public static SqlConnection ketnoi()
         {
-            //string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             //string connString = "Data Source=LAPTOP-N5BUPLIL;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            string connString = @"Data Source=DESKTOP-1FODL3G\USTEAM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = "Data Source=DESKTOP-1FODL3G\USTEAM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             //string connString = "Data Source=LTANH59\\MSSQLSERVER01;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
@@ -31,7 +31,7 @@ namespace FormChinh
             SqlDataAdapter da = new SqlDataAdapter(sql, ketnoi());
             DataTable dt = new DataTable();
             da.Fill(dt);
-            conn.Close();
+            //conn.Close();
             return dt;
         }
         public static void GanNguonDataGridView(DataGridView dgName, string sql)
