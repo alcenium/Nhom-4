@@ -41,7 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 114);
+            this.label1.Location = new System.Drawing.Point(64, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 18);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(96, 29);
+            this.label2.Location = new System.Drawing.Point(61, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(284, 32);
             this.label2.TabIndex = 1;
@@ -60,17 +60,17 @@
             // txtQuenMK
             // 
             this.txtQuenMK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuenMK.Location = new System.Drawing.Point(144, 111);
+            this.txtQuenMK.Location = new System.Drawing.Point(125, 111);
             this.txtQuenMK.Name = "txtQuenMK";
-            this.txtQuenMK.Size = new System.Drawing.Size(305, 26);
+            this.txtQuenMK.Size = new System.Drawing.Size(256, 26);
             this.txtQuenMK.TabIndex = 2;
             // 
             // btnQuenMK
             // 
             this.btnQuenMK.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuenMK.Location = new System.Drawing.Point(34, 208);
+            this.btnQuenMK.Location = new System.Drawing.Point(125, 159);
             this.btnQuenMK.Name = "btnQuenMK";
-            this.btnQuenMK.Size = new System.Drawing.Size(187, 43);
+            this.btnQuenMK.Size = new System.Drawing.Size(113, 36);
             this.btnQuenMK.TabIndex = 3;
             this.btnQuenMK.Text = "Gửi";
             this.btnQuenMK.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(262, 208);
+            this.btnThoat.Location = new System.Drawing.Point(268, 159);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(187, 43);
+            this.btnThoat.Size = new System.Drawing.Size(113, 36);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 79);
+            this.label3.Location = new System.Drawing.Point(11, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 18);
             this.label3.TabIndex = 5;
@@ -99,16 +99,16 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 79);
+            this.textBox1.Location = new System.Drawing.Point(125, 60);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 26);
+            this.textBox1.Size = new System.Drawing.Size(256, 26);
             this.textBox1.TabIndex = 6;
             // 
             // frmQuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 286);
+            this.ClientSize = new System.Drawing.Size(399, 213);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
