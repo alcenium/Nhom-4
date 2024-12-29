@@ -52,5 +52,10 @@ namespace FormChinh
             frmQuenMK frm = new frmQuenMK();
             frm.Show();
         }
+
+        private void txtTK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
