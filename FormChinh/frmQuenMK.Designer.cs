@@ -40,35 +40,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 18);
+            this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(61, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(284, 32);
+            this.label2.Size = new System.Drawing.Size(287, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Khôi phục mật khẩu";
             // 
             // txtQuenMK
             // 
-            this.txtQuenMK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuenMK.Location = new System.Drawing.Point(125, 111);
+            this.txtQuenMK.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuenMK.Location = new System.Drawing.Point(131, 111);
             this.txtQuenMK.Name = "txtQuenMK";
-            this.txtQuenMK.Size = new System.Drawing.Size(256, 26);
+            this.txtQuenMK.Size = new System.Drawing.Size(256, 27);
             this.txtQuenMK.TabIndex = 2;
             // 
             // btnQuenMK
             // 
-            this.btnQuenMK.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuenMK.Location = new System.Drawing.Point(125, 159);
+            this.btnQuenMK.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuenMK.Location = new System.Drawing.Point(131, 159);
             this.btnQuenMK.Name = "btnQuenMK";
             this.btnQuenMK.Size = new System.Drawing.Size(113, 36);
             this.btnQuenMK.TabIndex = 3;
@@ -77,8 +77,8 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(268, 159);
+            this.btnThoat.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(274, 159);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(113, 36);
             this.btnThoat.TabIndex = 4;
@@ -89,19 +89,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 18);
+            this.label3.Size = new System.Drawing.Size(121, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Mã Sinh Viên:";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(125, 57);
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(131, 57);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 26);
+            this.textBox1.Size = new System.Drawing.Size(256, 27);
             this.textBox1.TabIndex = 6;
             // 
             // frmQuenMK

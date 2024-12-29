@@ -76,6 +76,9 @@ namespace FormChinh
             KtThem = true;
             KhoaMo(false);
             txtMaLop.Focus();
+            cmdSua.Visible = false;
+            cmdXoa.Visible = false;
+            cmdThoat.Visible = false;
         }
 
         private void cmdSua_Click(object sender, EventArgs e)
@@ -85,6 +88,84 @@ namespace FormChinh
             KtThem = false;
             KhoaMo(false);
             txtMaLop.Focus();
+            cmdThem.Visible = false;
+            cmdXoa.Visible = false;
+            cmdThoat.Visible = false;
+        }
+
+        private void cmdNhap_Click(object sender, EventArgs e)
+        {
+            if(txtMaLop.Text == "")
+            {
+                MessageBox.Show("Chưa nhập mã lớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtMaLop.Focus();
+                return;
+            }
+            if (txtLop.Text == "")
+            {
+                MessageBox.Show("Chưa nhập tên lớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtLop.Focus();
+                return;
+            }
+            if (KtThem == true)
+            {
+                if (ktTrung_Them(txtMaLop.Text) == true)
+                {
+                    MessageBox.Show("Mã đã tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtMaLop.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                if (ktTrung_Sua(txtMaLop.Text) == true)
+                {
+                    MessageBox.Show("Mã đã tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtMaLop.Focus();
+                    return;
+                }
+            }
+            if (KtThem == true)
+                sql = "insert into lop(maLop, maKhoa, maNganh, tenLop, gvcn) values (N'" + txtMaLop.Text + "', N'" + cboKhoa.SelectedValue.ToString() +
+                    "', N'" + cboNganh.SelectedValue.ToString() + "', N'" + txtLop.Text + "', N'" + txtGVCN.Text + "')";
+            else
+                sql = "update lop set malop = N'" + txtMaLop.Text + "', maKhoa = N'" + cboKhoa.SelectedValue.ToString() + 
+                    "', maNganh = N'" + cboNganh.SelectedValue.ToString() + "', tenLop = N'" + txtLop.Text + "', gvcn = N'" + 
+                    txtGVCN.Text + "' where malop = N'" + macu + "'";
+            if (conn.State != ConnectionState.Open) conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            KhoaMo(true);
+            XoaTrang();
+            LayNguonLop();
+            cmdSua.Visible = true;
+            cmdThoat.Visible = true;
+            cmdThem.Visible = true;
+            cmdXoa.Visible = true;
+        }
+
+        public bool ktTrung_Them(string manhap)
+        {
+            sql = "Select * from lop where malop = N'" + manhap + "'";
+            da = new SqlDataAdapter(sql, conn);
+            dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool ktTrung_Sua(string manhap)
+        {
+            sql = "Select * from lop where malop = N'" + manhap + "' and malop <> N'" + macu + "'";
+            da = new SqlDataAdapter(sql, conn);
+            dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+                return true;
+            else
+                return false;
         }
 
         private void cmdXoa_Click(object sender, EventArgs e)
@@ -137,6 +218,8 @@ namespace FormChinh
             cmdThem.Enabled = b;
             cmdSua.Enabled = b;
             cmdThoat.Enabled = b;
+            cmdNhap.Visible = !b;
+            cmdHuy.Visible = !b;
         }
         public void XoaTrang()
         {
