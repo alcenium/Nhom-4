@@ -168,6 +168,16 @@ namespace FormChinh
                 return false;
         }
 
+        private void cmdHuy_Click(object sender, EventArgs e)
+        {
+            KhoaMo(true);
+            dgDanhMuc_CellMouseClick(sender, vt);
+            cmdSua.Visible = true;
+            cmdThoat.Visible = true;
+            cmdThem.Visible = true;
+            cmdXoa.Visible = true;
+        }
+
         private void cmdXoa_Click(object sender, EventArgs e)
         {
             if (txtMaLop.Text == "") return;

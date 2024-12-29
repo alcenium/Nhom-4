@@ -325,6 +325,7 @@
             this.cmdHuy.TabIndex = 23;
             this.cmdHuy.Text = "❌";
             this.cmdHuy.UseVisualStyleBackColor = true;
+            this.cmdHuy.Click += new System.EventHandler(this.cmdHuy_Click);
             // 
             // frmQuanLyLopHoc
             // 
