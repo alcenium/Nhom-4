@@ -10,20 +10,22 @@ using System.Windows.Forms;
 
 namespace FormChinh
 {
-    public partial class frmQuenMK : Form
+    public partial class Quản_lý_chuyên_ngành : Form
     {
-        private frmDangNhap frm;
-        public frmQuenMK(frmDangNhap frm)
+        
+        public Quản_lý_chuyên_ngành()
         {
-            this.frm = frm;
             InitializeComponent();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmDangNhap frm = new frmDangNhap();
-            frm.Show();
+
+        }
+
+        private void cmdThem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

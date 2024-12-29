@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace FormChinh
 {
     public partial class frmDangNhap : Form
     {
         string sql;
+        DataTable dtDangNhap;
         public frmDangNhap()
         {
             InitializeComponent();
@@ -30,12 +32,11 @@ namespace FormChinh
             }
 
             sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = '{txtTK.Text}' AND matKhau = '{txtMK.Text}'";
-
-            if (Public.LayDuLieu(sql).Rows.Count == 1)
+            dtDangNhap = Public.LayDuLieu(sql);
+            if (dtDangNhap.Rows.Count == 1)
             {
-                sql = $"SELECT chucVu from QuanLyTaiKhoan WHERE tenTaiKhoan = '{txtTK.Text}'";
                 this.Hide();
-                MDIForm frm = new MDIForm(this, txtTK.Text, Public.LayDuLieu(sql).Rows[0][0].ToString());
+                MDIForm frm = new MDIForm(this, txtTK.Text, dtDangNhap.Rows[0][2].ToString());
                 frm.Show();
             }
             else MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Lỗi!");
@@ -49,7 +50,7 @@ namespace FormChinh
         private void LnkQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            frmQuenMK frm = new frmQuenMK();
+            frmQuenMK frm = new frmQuenMK(this);
             frm.Show();
         }
 

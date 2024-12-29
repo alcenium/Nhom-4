@@ -12,7 +12,7 @@ namespace FormChinh.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.11.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.12.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,22 +26,22 @@ namespace FormChinh.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1FODL3G\\USTEAM;Initial Catalog=phanMemDiemDanh;Integrated Sec" +
-            "urity=True;TrustServerCertificate=True")]
-        public string phanMemDiemDanhConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WINDOW\\ALCENIUM;Initial Catalog=phanMemDiemDanh;Integrated Security=T" +
+            "rue;Encrypt=True;TrustServerCertificate=True")]
+        public string HungConnectionString {
             get {
-                return ((string)(this["phanMemDiemDanhConnectionString"]));
+                return ((string)(this["HungConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WINDOW\\ALCENIUM;Initial Catalog=phanMemDiemDanh;Integrated Security=T" +
-            "rue;TrustServerCertificate=True")]
-        public string phanMemDiemDanhConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Tru" +
+            "stServerCertificate=True")]
+        public string HungDiemDanhConnectionString {
             get {
-                return ((string)(this["phanMemDiemDanhConnectionString1"]));
+                return ((string)(this["HungDiemDanhConnectionString"]));
             }
         }
     }

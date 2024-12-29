@@ -26,8 +26,8 @@ namespace FormChinh
             switch (loaiTK)
             {
                 case "ql": tstbLoaiTaiKhoan.Text = "Quản lý"; break;
-                case "hs": tstbLoaiTaiKhoan.Text = "Học sinh"; break;
-                case "gv": tstbLoaiTaiKhoan.Text = "Giáo viên"; break;
+                case "sv": tstbLoaiTaiKhoan.Text = "Sinh viên"; break;
+                case "gv": tstbLoaiTaiKhoan.Text = "Giảng viên"; break;
             }
         }
 
@@ -61,6 +61,19 @@ namespace FormChinh
             frmDoiMatKhau frm = new frmDoiMatKhau(tenTK);
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void mnuQlyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MDIForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

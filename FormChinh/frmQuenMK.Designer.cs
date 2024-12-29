@@ -32,16 +32,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtQuenMK = new System.Windows.Forms.TextBox();
             this.btnQuenMK = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 105);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.Size = new System.Drawing.Size(52, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
             // 
@@ -49,43 +51,76 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 36);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(61, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 40);
+            this.label2.Size = new System.Drawing.Size(284, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Khôi phục mật khẩu";
             // 
             // txtQuenMK
             // 
-            this.txtQuenMK.Location = new System.Drawing.Point(124, 107);
-            this.txtQuenMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuenMK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuenMK.Location = new System.Drawing.Point(125, 111);
             this.txtQuenMK.Name = "txtQuenMK";
-            this.txtQuenMK.Size = new System.Drawing.Size(473, 22);
+            this.txtQuenMK.Size = new System.Drawing.Size(256, 26);
             this.txtQuenMK.TabIndex = 2;
             // 
             // btnQuenMK
             // 
             this.btnQuenMK.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuenMK.Location = new System.Drawing.Point(81, 187);
-            this.btnQuenMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuenMK.Location = new System.Drawing.Point(125, 159);
             this.btnQuenMK.Name = "btnQuenMK";
-            this.btnQuenMK.Size = new System.Drawing.Size(475, 55);
+            this.btnQuenMK.Size = new System.Drawing.Size(113, 36);
             this.btnQuenMK.TabIndex = 3;
             this.btnQuenMK.Text = "Gửi";
             this.btnQuenMK.UseVisualStyleBackColor = true;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(268, 159);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(113, 36);
+            this.btnThoat.TabIndex = 4;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 18);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Mã Sinh Viên:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(125, 57);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(256, 26);
+            this.textBox1.TabIndex = 6;
+            // 
             // frmQuenMK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 257);
+            this.ClientSize = new System.Drawing.Size(399, 213);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnQuenMK);
             this.Controls.Add(this.txtQuenMK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmQuenMK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quên mật khẩu";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -98,5 +133,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtQuenMK;
         private System.Windows.Forms.Button btnQuenMK;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

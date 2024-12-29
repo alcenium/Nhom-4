@@ -60,6 +60,7 @@ namespace FormChinh
             sql = $"UPDATE QuanLyTaiKhoan SET matKhau = '{txtMatKhauMoi.Text}' WHERE tenTaiKhoan = '{tenTK}'";
             Public.ThucHienSQL(sql);
             MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }
