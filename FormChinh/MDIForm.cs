@@ -75,5 +75,12 @@ namespace FormChinh
             if (MessageBox.Show("Bạn có muốn thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
         }
+
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

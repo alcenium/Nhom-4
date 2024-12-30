@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgSinhVien = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,15 +52,20 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.bSua = new System.Windows.Forms.Button();
             this.bThoat = new System.Windows.Forms.Button();
+            this.tbLop = new System.Windows.Forms.ComboBox();
+            this.diemDanhDataSet = new FormChinh.DiemDanhDataSet();
+            this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lopTableAdapter = new FormChinh.DiemDanhDataSetTableAdapters.LopTableAdapter();
             this.dgMaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgHoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbLop = new System.Windows.Forms.ComboBox();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemDanhDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +90,7 @@
             this.dgGioiTinh,
             this.dgNgaySinh,
             this.dgSoDienThoai,
-            this.Column1});
+            this.email});
             this.dgSinhVien.Location = new System.Drawing.Point(12, 45);
             this.dgSinhVien.Name = "dgSinhVien";
             this.dgSinhVien.ReadOnly = true;
@@ -299,6 +305,32 @@
             this.bThoat.UseVisualStyleBackColor = true;
             this.bThoat.Click += new System.EventHandler(this.bThoat_Click);
             // 
+            // tbLop
+            // 
+            this.tbLop.DataSource = this.lopBindingSource;
+            this.tbLop.DisplayMember = "MaLop";
+            this.tbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbLop.FormattingEnabled = true;
+            this.tbLop.Location = new System.Drawing.Point(443, 313);
+            this.tbLop.Name = "tbLop";
+            this.tbLop.Size = new System.Drawing.Size(191, 27);
+            this.tbLop.TabIndex = 26;
+            this.tbLop.ValueMember = "MaLop";
+            // 
+            // diemDanhDataSet
+            // 
+            this.diemDanhDataSet.DataSetName = "DiemDanhDataSet";
+            this.diemDanhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lopBindingSource
+            // 
+            this.lopBindingSource.DataMember = "Lop";
+            this.lopBindingSource.DataSource = this.diemDanhDataSet;
+            // 
+            // lopTableAdapter
+            // 
+            this.lopTableAdapter.ClearBeforeFill = true;
+            // 
             // dgMaSinhVien
             // 
             this.dgMaSinhVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -348,21 +380,12 @@
             this.dgSoDienThoai.Name = "dgSoDienThoai";
             this.dgSoDienThoai.ReadOnly = true;
             // 
-            // Column1
+            // email
             // 
-            this.Column1.DataPropertyName = "email";
-            this.Column1.HeaderText = "Email";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // tbLop
-            // 
-            this.tbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tbLop.FormattingEnabled = true;
-            this.tbLop.Location = new System.Drawing.Point(443, 313);
-            this.tbLop.Name = "tbLop";
-            this.tbLop.Size = new System.Drawing.Size(191, 27);
-            this.tbLop.TabIndex = 26;
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // frmQuanLySinhVien
             // 
@@ -403,6 +426,8 @@
             this.Text = "Quản Lý Sinh Viên";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemDanhDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,14 +465,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox tbLop;
+        private DiemDanhDataSet diemDanhDataSet;
+        private System.Windows.Forms.BindingSource lopBindingSource;
+        private DiemDanhDataSetTableAdapters.LopTableAdapter lopTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgMaSinhVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgHoVaTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgGioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgNgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgSoDienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.ComboBox tbLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }
 

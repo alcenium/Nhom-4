@@ -20,10 +20,10 @@ namespace FormChinh
 
         public static SqlConnection ketNoi()
         {
-            //string connString = "Data Source=WINDOW\\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            //string connString = "Data Source=LAPTOP-N5BUPLIL;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            string connString = @"Data Source=DESKTOP-1FODL3G\USTEAM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
-            //string connString = "Data Source=LTANH59\\MSSQLSERVER01;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            string connString = @"Data Source=WINDOW\ALCENIUM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = @"Data Source=LAPTOP-N5BUPLIL;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = @"Data Source=DESKTOP-1FODL3G\USTEAM;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
+            //string connString = @"Data Source=LTANH59\MSSQLSERVER01;Initial Catalog=DiemDanh;Integrated Security=True;Encrypt=False";
             conn = new SqlConnection(connString);
             return conn;
         }
@@ -78,8 +78,7 @@ namespace FormChinh
         {
             try
             {
-                DateTime Temp;
-                if (DateTime.TryParse(date, out Temp) == true)
+                if (DateTime.TryParse(date, out DateTime Temp) == true)
                     return true;
                 else
                     return false;
@@ -142,9 +141,11 @@ namespace FormChinh
             Microsoft.Office.Interop.Excel.Worksheet worksheet;
             try
             {
-                excel = new Microsoft.Office.Interop.Excel.Application();
-                excel.Visible = true;
-                excel.DisplayAlerts = false;
+                excel = new Microsoft.Office.Interop.Excel.Application
+                {
+                    Visible = true,
+                    DisplayAlerts = false
+                };
 
                 workbook = excel.Workbooks.Add(Type.Missing);//tạo mới một Workbooks bằng phương thức add()
                 worksheet = null;
@@ -187,9 +188,11 @@ namespace FormChinh
             Microsoft.Office.Interop.Excel.Worksheet worksheet;
             try
             {
-                excel = new Microsoft.Office.Interop.Excel.Application();
-                excel.Visible = true;
-                excel.DisplayAlerts = false;
+                excel = new Microsoft.Office.Interop.Excel.Application
+                {
+                    Visible = true,
+                    DisplayAlerts = false
+                };
 
                 workbook = excel.Workbooks.Add(Type.Missing);
                 worksheet = null;

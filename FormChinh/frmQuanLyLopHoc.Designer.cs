@@ -182,7 +182,6 @@
             this.dgDanhMuc.ReadOnly = true;
             this.dgDanhMuc.Size = new System.Drawing.Size(758, 241);
             this.dgDanhMuc.TabIndex = 14;
-            this.dgDanhMuc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3
             // 

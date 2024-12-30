@@ -34,8 +34,7 @@ namespace FormChinh
             tbSoDienThoai.ReadOnly = b;
             dateNgaySinh.Enabled = b;
             cbNam.Enabled = !b;
-            cbNu.Enabled = !b;  
-            
+            cbNu.Enabled = !b;
         }
 
         void LayNguon(String sql = "Select * From SinhVien")
@@ -84,18 +83,18 @@ namespace FormChinh
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgSinhVien.Rows[e.RowIndex];
-                tbMaSinhVien.Text = row.Cells[0].Value.ToString();
-                tbHoTen.Text = row.Cells[1].Value.ToString();
-                tbLop.Text = row.Cells[3].Value.ToString();
-                dateNgaySinh.Text = row.Cells[4].Value.ToString();
-                tbSoDienThoai.Text = row.Cells[5].Value.ToString();
-                tbEmail.Text = row.Cells[6].Value.ToString();
-                switch (row.Cells[2].Value.ToString())
+                tbMaSinhVien.Text   = row.Cells[0].Value.ToString();
+                tbLop.Text          = row.Cells[1].Value.ToString();
+                tbHoTen.Text        = row.Cells[2].Value.ToString();
+                dateNgaySinh.Text   = row.Cells[3].Value.ToString();
+                tbSoDienThoai.Text  = row.Cells[5].Value.ToString();
+                tbEmail.Text        = row.Cells[6].Value.ToString();
+                switch (row.Cells[4].Value.ToString())
                 {
-                    case "M":
+                    case "True":
                         cbNam.Checked = true;
                         break;
-                    case "F":
+                    case "False":
                         cbNu.Checked = true;
                         break;
                     default:

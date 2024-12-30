@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 64);
+            this.label1.Location = new System.Drawing.Point(25, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 23);
@@ -53,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 112);
+            this.label2.Location = new System.Drawing.Point(25, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 23);
@@ -63,8 +63,8 @@
             // txtTK
             // 
             this.txtTK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Location = new System.Drawing.Point(177, 64);
-            this.txtTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTK.Location = new System.Drawing.Point(122, 58);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(4);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(275, 27);
             this.txtTK.TabIndex = 4;
@@ -73,8 +73,8 @@
             // txtMK
             // 
             this.txtMK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(177, 112);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMK.Location = new System.Drawing.Point(122, 106);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(4);
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(275, 27);
@@ -83,8 +83,8 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(177, 158);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangNhap.Location = new System.Drawing.Point(123, 156);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(129, 36);
             this.btnDangNhap.TabIndex = 6;
@@ -95,7 +95,7 @@
             // LnkQuenMK
             // 
             this.LnkQuenMK.AutoSize = true;
-            this.LnkQuenMK.Location = new System.Drawing.Point(343, 139);
+            this.LnkQuenMK.Location = new System.Drawing.Point(289, 137);
             this.LnkQuenMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LnkQuenMK.Name = "LnkQuenMK";
             this.LnkQuenMK.Size = new System.Drawing.Size(108, 16);
@@ -106,8 +106,8 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(324, 158);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Location = new System.Drawing.Point(270, 156);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(129, 36);
             this.btnThoat.TabIndex = 7;
@@ -119,7 +119,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(225, 9);
+            this.label3.Location = new System.Drawing.Point(131, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 33);
@@ -132,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(516, 227);
+            this.ClientSize = new System.Drawing.Size(413, 205);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LnkQuenMK);
             this.Controls.Add(this.btnThoat);
@@ -143,7 +143,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDangNhap";
