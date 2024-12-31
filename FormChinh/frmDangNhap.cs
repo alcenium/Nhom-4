@@ -53,5 +53,12 @@ namespace FormChinh
             frmQuenMK frm = new frmQuenMK(this);
             frm.Show();
         }
+
+        private void LnkDangKi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            frmDangKi frm = new frmDangKi();
+            frm.Show();
+        }
     }
 }

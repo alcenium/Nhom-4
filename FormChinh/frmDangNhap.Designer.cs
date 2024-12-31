@@ -36,6 +36,7 @@
             this.LnkQuenMK = new System.Windows.Forms.LinkLabel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.LnkDangKi = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -125,13 +126,26 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "ĐĂNG NHẬP";
             // 
+            // LnkDangKi
+            // 
+            this.LnkDangKi.AutoSize = true;
+            this.LnkDangKi.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkDangKi.Location = new System.Drawing.Point(98, 116);
+            this.LnkDangKi.Name = "LnkDangKi";
+            this.LnkDangKi.Size = new System.Drawing.Size(55, 16);
+            this.LnkDangKi.TabIndex = 10;
+            this.LnkDangKi.TabStop = true;
+            this.LnkDangKi.Text = "Đăng kí";
+            this.LnkDangKi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkDangKi_LinkClicked);
+            // 
             // frmDangNhap
             // 
             this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(375, 193);
+            this.ClientSize = new System.Drawing.Size(359, 189);
+            this.Controls.Add(this.LnkDangKi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LnkQuenMK);
             this.Controls.Add(this.btnThoat);
@@ -141,6 +155,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -161,6 +176,7 @@
         private System.Windows.Forms.LinkLabel LnkQuenMK;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel LnkDangKi;
     }
 }
 

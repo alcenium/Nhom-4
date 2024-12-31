@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgSinhVien = new System.Windows.Forms.DataGridView();
+            this.dgMaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgHoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,18 +60,8 @@
             this.bSua = new System.Windows.Forms.Button();
             this.bThoat = new System.Windows.Forms.Button();
             this.tbLop = new System.Windows.Forms.ComboBox();
-            this.diemDanhDataSet = new FormChinh.DiemDanhDataSet();
             this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lopTableAdapter = new FormChinh.DiemDanhDataSetTableAdapters.LopTableAdapter();
-            this.dgMaSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgHoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemDanhDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +94,62 @@
             this.dgSinhVien.Size = new System.Drawing.Size(893, 248);
             this.dgSinhVien.TabIndex = 11;
             this.dgSinhVien.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // dgMaSinhVien
+            // 
+            this.dgMaSinhVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgMaSinhVien.DataPropertyName = "maSV";
+            this.dgMaSinhVien.DividerWidth = 1;
+            this.dgMaSinhVien.HeaderText = "Mã sinh viên";
+            this.dgMaSinhVien.Name = "dgMaSinhVien";
+            this.dgMaSinhVien.ReadOnly = true;
+            // 
+            // dgHoVaTen
+            // 
+            this.dgHoVaTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgHoVaTen.DataPropertyName = "hoTen";
+            this.dgHoVaTen.HeaderText = "Họ tên";
+            this.dgHoVaTen.Name = "dgHoVaTen";
+            this.dgHoVaTen.ReadOnly = true;
+            // 
+            // dgLop
+            // 
+            this.dgLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgLop.DataPropertyName = "maLop";
+            this.dgLop.HeaderText = "Lớp";
+            this.dgLop.Name = "dgLop";
+            this.dgLop.ReadOnly = true;
+            // 
+            // dgGioiTinh
+            // 
+            this.dgGioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgGioiTinh.DataPropertyName = "gioiTinh";
+            this.dgGioiTinh.HeaderText = "Giới tính";
+            this.dgGioiTinh.Name = "dgGioiTinh";
+            this.dgGioiTinh.ReadOnly = true;
+            // 
+            // dgNgaySinh
+            // 
+            this.dgNgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgNgaySinh.DataPropertyName = "ngaySinh";
+            this.dgNgaySinh.HeaderText = "Ngày sinh";
+            this.dgNgaySinh.Name = "dgNgaySinh";
+            this.dgNgaySinh.ReadOnly = true;
+            // 
+            // dgSoDienThoai
+            // 
+            this.dgSoDienThoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgSoDienThoai.DataPropertyName = "SDT";
+            this.dgSoDienThoai.HeaderText = "Số điện thoại";
+            this.dgSoDienThoai.Name = "dgSoDienThoai";
+            this.dgSoDienThoai.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // label2
             // 
@@ -317,76 +370,6 @@
             this.tbLop.TabIndex = 26;
             this.tbLop.ValueMember = "MaLop";
             // 
-            // diemDanhDataSet
-            // 
-            this.diemDanhDataSet.DataSetName = "DiemDanhDataSet";
-            this.diemDanhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lopBindingSource
-            // 
-            this.lopBindingSource.DataMember = "Lop";
-            this.lopBindingSource.DataSource = this.diemDanhDataSet;
-            // 
-            // lopTableAdapter
-            // 
-            this.lopTableAdapter.ClearBeforeFill = true;
-            // 
-            // dgMaSinhVien
-            // 
-            this.dgMaSinhVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgMaSinhVien.DataPropertyName = "maSV";
-            this.dgMaSinhVien.DividerWidth = 1;
-            this.dgMaSinhVien.HeaderText = "Mã sinh viên";
-            this.dgMaSinhVien.Name = "dgMaSinhVien";
-            this.dgMaSinhVien.ReadOnly = true;
-            // 
-            // dgHoVaTen
-            // 
-            this.dgHoVaTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgHoVaTen.DataPropertyName = "hoTen";
-            this.dgHoVaTen.HeaderText = "Họ tên";
-            this.dgHoVaTen.Name = "dgHoVaTen";
-            this.dgHoVaTen.ReadOnly = true;
-            // 
-            // dgLop
-            // 
-            this.dgLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgLop.DataPropertyName = "maLop";
-            this.dgLop.HeaderText = "Lớp";
-            this.dgLop.Name = "dgLop";
-            this.dgLop.ReadOnly = true;
-            // 
-            // dgGioiTinh
-            // 
-            this.dgGioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgGioiTinh.DataPropertyName = "gioiTinh";
-            this.dgGioiTinh.HeaderText = "Giới tính";
-            this.dgGioiTinh.Name = "dgGioiTinh";
-            this.dgGioiTinh.ReadOnly = true;
-            // 
-            // dgNgaySinh
-            // 
-            this.dgNgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgNgaySinh.DataPropertyName = "ngaySinh";
-            this.dgNgaySinh.HeaderText = "Ngày sinh";
-            this.dgNgaySinh.Name = "dgNgaySinh";
-            this.dgNgaySinh.ReadOnly = true;
-            // 
-            // dgSoDienThoai
-            // 
-            this.dgSoDienThoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgSoDienThoai.DataPropertyName = "SDT";
-            this.dgSoDienThoai.HeaderText = "Số điện thoại";
-            this.dgSoDienThoai.Name = "dgSoDienThoai";
-            this.dgSoDienThoai.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
             // frmQuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -426,7 +409,6 @@
             this.Text = "Quản Lý Sinh Viên";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemDanhDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -466,9 +448,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sdtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox tbLop;
-        private DiemDanhDataSet diemDanhDataSet;
         private System.Windows.Forms.BindingSource lopBindingSource;
-        private DiemDanhDataSetTableAdapters.LopTableAdapter lopTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgMaSinhVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgHoVaTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgLop;

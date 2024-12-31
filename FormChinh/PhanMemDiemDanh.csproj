@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKi.Designer.cs">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLichHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyHocPhan.Designer.cs">
+      <DependentUpon>frmQuanLyHocPhan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQuanLyLopHoc.cs">
       <SubType>Form</SubType>
@@ -88,6 +100,18 @@
     <Compile Include="frmQuenMK.Designer.cs">
       <DependentUpon>frmQuenMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaiKhoanCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaiKhoanCaNhan.Designer.cs">
+      <DependentUpon>frmTaiKhoanCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinGiangVien.Designer.cs">
+      <DependentUpon>frmThongTinGiangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThucHienDiemDanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +133,17 @@
     <Compile Include="frmChuyenNganh.Designer.cs">
       <DependentUpon>frmChuyenNganh.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmDangKi.resx">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLichHoc.resx">
       <DependentUpon>frmLichHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyHocPhan.resx">
+      <DependentUpon>frmQuanLyHocPhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyLopHoc.resx">
       <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
@@ -130,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuenMK.resx">
       <DependentUpon>frmQuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaiKhoanCaNhan.resx">
+      <DependentUpon>frmTaiKhoanCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinGiangVien.resx">
+      <DependentUpon>frmThongTinGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThucHienDiemDanh.resx">
       <DependentUpon>frmThucHienDiemDanh.cs</DependentUpon>
@@ -149,17 +185,6 @@
     <EmbeddedResource Include="frmChuyenNganh.resx">
       <DependentUpon>frmChuyenNganh.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DiemDanhDataSet.xsc">
-      <DependentUpon>DiemDanhDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DiemDanhDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DiemDanhDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DiemDanhDataSet.xss">
-      <DependentUpon>DiemDanhDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

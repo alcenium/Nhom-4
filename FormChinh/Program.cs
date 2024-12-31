@@ -14,7 +14,7 @@ namespace FormChinh
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frmQuanLyLopHoc());
+            Application.Run(new frmDangNhap());
         }
     }
 }
