@@ -67,5 +67,12 @@ namespace FormChinh
                 txtMK.PasswordChar = '\0';
             }
         }
+
+        private void LnkDangKi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            frmDangKi frm = new frmDangKi();
+            frm.Show();
+        }
     }
 }

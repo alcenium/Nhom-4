@@ -37,6 +37,7 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.bToggle = new System.Windows.Forms.Button();
+            this.LnkDangKi = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -76,14 +77,14 @@
             this.txtMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
-            this.txtMK.Size = new System.Drawing.Size(241, 27);
+            this.txtMK.Size = new System.Drawing.Size(202, 27);
             this.txtMK.TabIndex = 5;
             this.txtMK.Text = "1";
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(101, 146);
+            this.btnDangNhap.Location = new System.Drawing.Point(101, 142);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(99, 34);
@@ -96,7 +97,7 @@
             // 
             this.LnkQuenMK.AutoSize = true;
             this.LnkQuenMK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LnkQuenMK.Location = new System.Drawing.Point(232, 123);
+            this.LnkQuenMK.Location = new System.Drawing.Point(232, 119);
             this.LnkQuenMK.Name = "LnkQuenMK";
             this.LnkQuenMK.Size = new System.Drawing.Size(110, 19);
             this.LnkQuenMK.TabIndex = 8;
@@ -107,7 +108,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(238, 146);
+            this.btnThoat.Location = new System.Drawing.Point(243, 142);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(99, 34);
@@ -139,13 +140,26 @@
             this.bToggle.UseVisualStyleBackColor = false;
             this.bToggle.Click += new System.EventHandler(this.bToggle_Click);
             // 
+            // LnkDangKi
+            // 
+            this.LnkDangKi.AutoSize = true;
+            this.LnkDangKi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkDangKi.Location = new System.Drawing.Point(97, 119);
+            this.LnkDangKi.Name = "LnkDangKi";
+            this.LnkDangKi.Size = new System.Drawing.Size(58, 19);
+            this.LnkDangKi.TabIndex = 11;
+            this.LnkDangKi.TabStop = true;
+            this.LnkDangKi.Text = "Đăng kí";
+            this.LnkDangKi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkDangKi_LinkClicked);
+            // 
             // frmDangNhap
             // 
             this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(375, 193);
+            this.ClientSize = new System.Drawing.Size(362, 193);
+            this.Controls.Add(this.LnkDangKi);
             this.Controls.Add(this.bToggle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LnkQuenMK);
@@ -178,6 +192,7 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bToggle;
+        private System.Windows.Forms.LinkLabel LnkDangKi;
     }
 }
 

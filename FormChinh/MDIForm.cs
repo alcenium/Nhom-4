@@ -59,7 +59,7 @@ namespace FormChinh
 
         private void tsmiKetThuc_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn kết thúc không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Thoatfrm = true;
                 Application.Exit();

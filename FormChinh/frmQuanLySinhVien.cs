@@ -32,6 +32,7 @@ namespace FormChinh
         {
             LayNguon();
             Public.GanNguonComboBox(cbLop, "maLop", "maLop", "SELECT * FROM Lop");
+            KhoaMo(true);
         }
 
         private void frmQuanLySinhVien_Activated(object sender, EventArgs e)
@@ -42,13 +43,15 @@ namespace FormChinh
 
         public void KhoaMo(bool b)
         {
+            dgSinhVien.Enabled     = b;
             tbMaSinhVien.ReadOnly  = b;
             tbHoTen.ReadOnly       = b;
             tbEmail.ReadOnly       = b;
             tbSoDienThoai.ReadOnly = b;
-            dateNgaySinh.Enabled   = b;
-            cbNam.Enabled          = b;
-            cbNu.Enabled           = b;
+            dateNgaySinh.Enabled   = !b;
+            cbNam.Enabled          = !b;
+            cbNu.Enabled           = !b;
+            cbLop.Enabled          = !b;
         }
 
         private void bThem_Click(object sender, EventArgs e)
