@@ -53,5 +53,19 @@ namespace FormChinh
             frmQuenMK frm = new frmQuenMK(this);
             frm.Show();
         }
+
+        private void bToggle_Click(object sender, EventArgs e)
+        {
+            if (bToggle.Text == "👁")
+            {
+                bToggle.Text = "‿";
+                txtMK.PasswordChar = '*';
+            }
+            else
+            {
+                bToggle.Text = "👁";
+                txtMK.PasswordChar = '\0';
+            }
+        }
     }
 }
