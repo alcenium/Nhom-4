@@ -54,11 +54,18 @@ namespace FormChinh
             frm.Show();
         }
 
-        private void LnkDangKi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void bToggle_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmDangKi frm = new frmDangKi();
-            frm.Show();
+            if (bToggle.Text == "👁")
+            {
+                bToggle.Text = "‿";
+                txtMK.PasswordChar = '*';
+            }
+            else
+            {
+                bToggle.Text = "👁";
+                txtMK.PasswordChar = '\0';
+            }
         }
     }
 }

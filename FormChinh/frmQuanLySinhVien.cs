@@ -15,26 +15,12 @@ namespace FormChinh
     {
         string sql;
         string maCu = "";
-        public frmQuanLySinhVien()
+        MDIForm parent;
+
+        public frmQuanLySinhVien(MDIForm parent)
         {
+            this.parent = parent;
             InitializeComponent();
-        }
-
-        public void KhoaMo(bool b)
-        {
-            dgSinhVien.Enabled = b;
-            bThem.Enabled = b;
-            bXoa.Enabled = b;
-            bThoat.Enabled = b;
-
-            tbLop.Enabled = !b;
-            tbMaSinhVien.ReadOnly = b;
-            tbHoTen.ReadOnly = b;
-            tbEmail.ReadOnly = b;
-            tbSoDienThoai.ReadOnly = b;
-            dateNgaySinh.Enabled = b;
-            cbNam.Enabled = !b;
-            cbNu.Enabled = !b;
         }
 
         void LayNguon(String sql = "Select * From SinhVien")
@@ -42,19 +28,37 @@ namespace FormChinh
             Public.GanNguonDataGridView(dgSinhVien, sql);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmQuanLySinhVien_Load(object sender, EventArgs e)
         {
             LayNguon();
+            Public.GanNguonComboBox(cbLop, "maLop", "maLop", "SELECT * FROM Lop");
+        }
+
+        private void frmQuanLySinhVien_Activated(object sender, EventArgs e)
+        {
+            LayNguon();
+            Public.GanNguonComboBox(cbLop, "maLop", "maLop", "SELECT * FROM Lop");
+        }
+
+        public void KhoaMo(bool b)
+        {
+            tbMaSinhVien.ReadOnly  = b;
+            tbHoTen.ReadOnly       = b;
+            tbEmail.ReadOnly       = b;
+            tbSoDienThoai.ReadOnly = b;
+            dateNgaySinh.Enabled   = b;
+            cbNam.Enabled          = b;
+            cbNu.Enabled           = b;
         }
 
         private void bThem_Click(object sender, EventArgs e)
         {
-            if (tbHoTen.Text == "" || tbLop.Text == "" || tbMaSinhVien.Text == "" || tbSoDienThoai.Text == "" || tbEmail.Text == "" || (!cbNam.Checked && !cbNu.Checked))
+            if (tbHoTen.Text == "" || cbLop.Text == "" || tbMaSinhVien.Text == "" || tbSoDienThoai.Text == "" || tbEmail.Text == "" || (!cbNam.Checked && !cbNu.Checked))
             {
                 MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            String gioiTinh = cbNam.Checked ? "M" : "F";
+            String gioiTinh = cbNam.Checked ? "Nam" : "Nữ";
 
             sql = $"SELECT * FROM SinhVien WHERE maSV = '{tbMaSinhVien.Text}'";
             if (Public.LayDuLieu(sql).Rows.Count > 0)
@@ -63,7 +67,8 @@ namespace FormChinh
                 return;
             }
 
-            sql = $"INSERT INTO SinhVien VALUES ('{tbMaSinhVien.Text}', '{tbHoTen.Text}', '{dateNgaySinh.Value}', '{tbLop.Text}', '{gioiTinh}', '{tbSoDienThoai.Text}', '{tbEmail.Text}')";
+            maCu = "";
+            sql = $"INSERT INTO SinhVien VALUES ('{tbMaSinhVien.Text}', '{tbHoTen.Text}', '{dateNgaySinh.Value}', '{cbLop.Text}', '{gioiTinh}', '{tbSoDienThoai.Text}', '{tbEmail.Text}')";
             Public.ThucHienSQL(sql);
             LayNguon();
         }
@@ -74,6 +79,7 @@ namespace FormChinh
             sql = $"DELETE FROM SinhVien WHERE maSV='{maCu}'";
             Public.ThucHienSQL(sql);
             LayNguon();
+            maCu = "";
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -84,17 +90,17 @@ namespace FormChinh
             {
                 DataGridViewRow row = dgSinhVien.Rows[e.RowIndex];
                 tbMaSinhVien.Text   = row.Cells[0].Value.ToString();
-                tbLop.Text          = row.Cells[1].Value.ToString();
+                cbLop.DisplayMember = row.Cells[1].Value.ToString();
                 tbHoTen.Text        = row.Cells[2].Value.ToString();
                 dateNgaySinh.Text   = row.Cells[3].Value.ToString();
                 tbSoDienThoai.Text  = row.Cells[5].Value.ToString();
                 tbEmail.Text        = row.Cells[6].Value.ToString();
                 switch (row.Cells[4].Value.ToString())
                 {
-                    case "True":
+                    case "Nam":
                         cbNam.Checked = true;
                         break;
-                    case "False":
+                    case "Nữ":
                         cbNu.Checked = true;
                         break;
                     default:
@@ -115,12 +121,6 @@ namespace FormChinh
             if (cbNu.Checked) cbNam.Checked = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            sql = $"SELECT * FROM SinhVien WHERE maSV LIKE '%{tbTimKiem.Text}%' OR hoTen LIKE '%{tbTimKiem.Text}%' OR maLop LIKE '%{tbTimKiem.Text}%'";
-            LayNguon(sql);
-        }
-
         private void bThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -128,18 +128,17 @@ namespace FormChinh
 
         private void bSua_Click(object sender, EventArgs e)
         {
-            sql = $"SELECT * FROM SinhVien WHERE maSV = '{tbMaSinhVien.Text}'";
-            if (Public.LayDuLieu(sql).Rows.Count != 1)
-            {
-                MessageBox.Show("Không có sinh viên với mã sinh viên tương ứng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            if (maCu == "") return;
+            frmQuanLySinhVien_Sua frm = new frmQuanLySinhVien_Sua(this, tbMaSinhVien.Text, tbHoTen.Text, cbLop.DisplayMember, cbNam.Checked ? "Nam" : "Nữ", dateNgaySinh.Value, tbSoDienThoai.Text, tbEmail.Text);
+            frm.MdiParent = this.parent;
+            frm.Show();
+            this.Hide();
+        }
 
-            if (tbHoTen.Text == "" || tbLop.Text == "" || tbMaSinhVien.Text == "" || tbSoDienThoai.Text == "" || tbEmail.Text == "" || (!cbNam.Checked && !cbNu.Checked))
-            {
-                MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        private void tbTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            sql = $"SELECT * FROM SinhVien WHERE maSV LIKE '%{tbTimKiem.Text}%' OR hoTen LIKE '%{tbTimKiem.Text}%' OR maLop LIKE '%{tbTimKiem.Text}%'";
+            LayNguon(sql);
         }
     }
 }

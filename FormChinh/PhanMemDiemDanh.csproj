@@ -82,6 +82,12 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuanLySinhVien-Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLySinhVien-Sua.Designer.cs">
+      <DependentUpon>frmQuanLySinhVien-Sua.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLySinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLySinhVien-Sua.resx">
+      <DependentUpon>frmQuanLySinhVien-Sua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLySinhVien.resx">
       <DependentUpon>frmQuanLySinhVien.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -181,6 +190,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="frmChuyenNganh.resx">
       <DependentUpon>frmChuyenNganh.cs</DependentUpon>
@@ -226,6 +236,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

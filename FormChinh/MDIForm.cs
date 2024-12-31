@@ -34,7 +34,7 @@ namespace FormChinh
 
         private void mnuQlySinhVien_Click(object sender, EventArgs e)
         {
-            frmQuanLySinhVien frm = new frmQuanLySinhVien();
+            frmQuanLySinhVien frm = new frmQuanLySinhVien(this);
             frm.MdiParent = this;
             frm.Show();
         }

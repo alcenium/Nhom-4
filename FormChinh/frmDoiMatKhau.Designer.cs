@@ -52,65 +52,66 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
+            this.label2.Size = new System.Drawing.Size(93, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu cũ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 15);
+            this.label3.Size = new System.Drawing.Size(103, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu mới:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 15);
+            this.label4.Size = new System.Drawing.Size(131, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nhập lại mật khẩu:";
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauCu.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauCu.Location = new System.Drawing.Point(156, 67);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.PasswordChar = '*';
-            this.txtMatKhauCu.Size = new System.Drawing.Size(213, 26);
+            this.txtMatKhauCu.Size = new System.Drawing.Size(213, 27);
             this.txtMatKhauCu.TabIndex = 0;
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauMoi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhauMoi.Location = new System.Drawing.Point(156, 108);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(213, 26);
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(213, 27);
             this.txtMatKhauMoi.TabIndex = 1;
             // 
             // txtNhapLaiMK
             // 
-            this.txtNhapLaiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhapLaiMK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhapLaiMK.Location = new System.Drawing.Point(156, 149);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.PasswordChar = '*';
-            this.txtNhapLaiMK.Size = new System.Drawing.Size(213, 26);
+            this.txtNhapLaiMK.Size = new System.Drawing.Size(213, 27);
             this.txtNhapLaiMK.TabIndex = 2;
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(268, 191);
+            this.btnHuy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(279, 191);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(101, 29);
+            this.btnHuy.Size = new System.Drawing.Size(90, 29);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -118,9 +119,10 @@
             // 
             // btnDoiMatKhau
             // 
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMatKhau.Location = new System.Drawing.Point(156, 191);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(101, 29);
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(117, 29);
             this.btnDoiMatKhau.TabIndex = 3;
             this.btnDoiMatKhau.Text = "Đổi Mật Khẩu";
             this.btnDoiMatKhau.UseVisualStyleBackColor = true;
