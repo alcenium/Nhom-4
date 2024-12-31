@@ -70,6 +70,12 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuanLySinhVien-Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLySinhVien-Sua.Designer.cs">
+      <DependentUpon>frmQuanLySinhVien-Sua.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLySinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLySinhVien-Sua.resx">
+      <DependentUpon>frmQuanLySinhVien-Sua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLySinhVien.resx">
       <DependentUpon>frmQuanLySinhVien.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -149,17 +158,6 @@
     <EmbeddedResource Include="frmChuyenNganh.resx">
       <DependentUpon>frmChuyenNganh.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DiemDanhDataSet.xsc">
-      <DependentUpon>DiemDanhDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DiemDanhDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DiemDanhDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DiemDanhDataSet.xss">
-      <DependentUpon>DiemDanhDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
