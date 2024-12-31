@@ -202,10 +202,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\eye.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eye_closed.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
