@@ -35,7 +35,7 @@ namespace FormChinh
         {
             if (tbAnswer.Text == $"{num1 + num2}")
             {
-                dtTaiKhoan = Public.LayDuLieu(String.Format(HangSo.timTenTaiKhoan, tbTenTaiKhoan.Text));
+                dtTaiKhoan = Public.LayDuLieu(String.Format(Queries.timTenTaiKhoan, tbTenTaiKhoan.Text));
                 if (dtTaiKhoan.Rows.Count <= 0)
                 {
                     MessageBox.Show("Sai tên tài khoản!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

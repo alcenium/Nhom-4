@@ -35,7 +35,7 @@ namespace FormChinh
                 return;
             }
 
-            if (Public.LayDuLieu(String.Format(HangSo.timTaiKhoan, tenTK, txtMatKhauCu.Text)).Rows.Count <= 0)
+            if (Public.LayDuLieu(String.Format(Queries.timTaiKhoan, tenTK, txtMatKhauCu.Text)).Rows.Count <= 0)
             {
                 MessageBox.Show("Bạn đã nhập sai mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -56,7 +56,7 @@ namespace FormChinh
                 return;
             }
 
-            Public.ThucHienSQL(String.Format(HangSo.doiMatKhau, txtMatKhauMoi.Text, tenTK));
+            Public.ThucHienSQL(String.Format(Queries.doiMatKhau, txtMatKhauMoi.Text, tenTK));
             MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

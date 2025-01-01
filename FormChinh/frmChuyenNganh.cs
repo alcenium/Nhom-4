@@ -62,7 +62,7 @@ namespace FormChinh
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if (Public.LayDuLieu(String.Format(HangSo.timMaChuyenNganh, tbMaChuyenNganh)).Rows.Count >= 1 && hoatDong == "them")
+            else if (Public.LayDuLieu(String.Format(Queries.timMaChuyenNganh, tbMaChuyenNganh)).Rows.Count >= 1 && hoatDong == "them")
             {
                 MessageBox.Show("Mã chuyên ngành đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -72,11 +72,11 @@ namespace FormChinh
                 switch (hoatDong)
                 {
                     case "them":
-                        Public.ThucHienSQL(String.Format(HangSo.themChuyenNganh, tbMaChuyenNganh.Text, tbTenChuyenNganh.Text));
+                        Public.ThucHienSQL(String.Format(Queries.themChuyenNganh, tbMaChuyenNganh.Text, tbTenChuyenNganh.Text));
                         LayNguon();
                         break;
                     case "sua": 
-                        Public.ThucHienSQL(String.Format(HangSo.suaChuyenNganh, tbTenChuyenNganh.Text, tbMaChuyenNganh.Text));
+                        Public.ThucHienSQL(String.Format(Queries.suaChuyenNganh, tbTenChuyenNganh.Text, tbMaChuyenNganh.Text));
                         LayNguon();
                         break;
                 }
@@ -90,7 +90,7 @@ namespace FormChinh
 
         private void tbTimKiem_TextChanged(object sender, EventArgs e)
         {
-            LayNguon(String.Format(HangSo.timChuyenNganh, tbMaChuyenNganh.Text, tbTenChuyenNganh.Text));
+            LayNguon(String.Format(Queries.timChuyenNganh, tbMaChuyenNganh.Text, tbTenChuyenNganh.Text));
         }
 
         private void dgChuyenNganh_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -106,7 +106,7 @@ namespace FormChinh
 
         private void bXoa_Click(object sender, EventArgs e)
         {
-            Public.ThucHienSQL(String.Format(HangSo.xoaChuyenNganh, tbMaChuyenNganh.Text));
+            Public.ThucHienSQL(String.Format(Queries.xoaChuyenNganh, tbMaChuyenNganh.Text));
             LayNguon();
             maCu = dgChuyenNganh.CurrentRow.Cells[0].Value.ToString();
         }

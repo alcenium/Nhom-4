@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FormChinh
 {
-    internal class HangSo
+    internal class Queries
     {
         ////// Quản lý chuyên ngành \\\\\\
         public static string sqlChuyenNganh   = "SELECT * FROM ChuyenNganh";
@@ -33,5 +33,13 @@ namespace FormChinh
         public static string timMaSinhVien    = "SELECT * FROM SinhVien WHERE maSV = '{0}'";
         public static string themSinhVien     = "INSERT INTO SinhVien VALUES ('{0}', N'{1}', '{2}', '{3}', '{4}', '{5}', '{6}')";
         public static string xoaSinhVien      = "DELETE FROM SinhVien WHERE maSV='{0}'";
+
+        ////// Thông tin sinh viên \\\\\\
+        public static string layThongTinSinhVien = "SELECT SinhVien.hoTen, SinhVien.ngaySinh, SinhVien.SDT, SinhVien.email, SinhVien.gioiTinh, SinhVien.maSV, Lop.tenLop, ChuyenNganh.tenNganh FROM SinhVien, Lop, ChuyenNganh WHERE maSV = '{0}' AND SinhVien.maLop = Lop.maLop AND Lop.maNganh = ChuyenNganh.maNganh";
+        public static string suaThongTinSinhVien = "UPDATE SinhVien SET hoTen = N'{0}', ngaySinh = '{1}', SDT = '{2}', email = '{3}', gioiTinh = '{4}' WHERE maSV = '{5}'";
+
+        ////// Thông tin giảng viên \\\\\\
+        public static string layThongTinGiangVien = "SELECT * FROM GiangVien WHERE maGV = '{0}'";
+        public static string suaThongTinGiangVien = "UPDATE GiangVien SET hoTen = N'{0}', ngaySinh = '{1}', gioiTinh = '{2}', SDT = '{3}', email = '{4}' WHERE maGV = '{5}'";
     }
 }

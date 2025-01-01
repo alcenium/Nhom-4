@@ -24,7 +24,7 @@ namespace FormChinh
             this.loaiTK = loaiTK;
 
             tstbTenTaiKhoan.Text = $"{tenTK}";
-            tstbLoaiTaiKhoan.Text = Public.LayDuLieu(String.Format(HangSo.loaiTaiKhoan, loaiTK)).Rows[0][0].ToString();
+            tstbLoaiTaiKhoan.Text = Public.LayDuLieu(String.Format(Queries.loaiTaiKhoan, loaiTK)).Rows[0][0].ToString();
         }
 
         private void mnuQlySinhVien_Click(object sender, EventArgs e)
@@ -68,20 +68,6 @@ namespace FormChinh
             frm.Show();
         }
 
-        private void mnuQlyTaiKhoan_Click(object sender, EventArgs e)
-        {
-            frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
         private void MDIForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!Thoatfrm)
@@ -96,6 +82,33 @@ namespace FormChinh
         private void quảnLýChuyênNgànhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChuyenNganh frm = new frmChuyenNganh();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            switch (loaiTK)
+            {
+                case "sv":
+                    frmTaiKhoanSinhVien frmSV = new frmTaiKhoanSinhVien(tenTK);
+                    frmSV.MdiParent = this;
+                    frmSV.Show();
+                    break;
+                case "gv":
+                    frmTaiKhoanGiangVien frmGV = new frmTaiKhoanGiangVien(tenTK);
+                    frmGV.MdiParent = this;
+                    frmGV.Show();
+                    break;
+                default:
+                    MessageBox.Show("Quản trị viên không có thông tin cá nhân", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+        }
+
+        private void mnuQlyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
             frm.MdiParent = this;
             frm.Show();
         }

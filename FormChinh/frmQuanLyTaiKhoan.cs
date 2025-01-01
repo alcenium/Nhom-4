@@ -26,10 +26,11 @@ namespace FormChinh
             InitializeComponent();
         }
 
-        void LayNguon()
+        void LayNguon(string sql = "Select tenTaiKhoan, matKhau, maChucVu From QuanLyTaiKhoan Order By tenTaiKhoan")
         {
-            Public.GanNguonDataGridView(dgDanhMuc, "Select tenTaiKhoan, matKhau, maChucVu From QuanLyTaiKhoan Order By tenTaiKhoan");
+            Public.GanNguonDataGridView(dgDanhMuc, sql);
         }
+
         public void KhoaMo(bool b)
         {
             dgDanhMuc.Enabled = b;
@@ -143,24 +144,22 @@ namespace FormChinh
                 txtTaiKhoan.Focus();
                 return;
             }
-            if ((MessageBox.Show("Bạn có muốn thêm/cập nhật tài khoản không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+
+            if (KtThem == true)
+                Public.sql = "Insert into QuanLyTaiKhoan(tenTaiKhoan, matKhau, maChucVu) Values(N'" + txtTaiKhoan.Text + "',N'" + txtMatKhau.Text + "',N'" + cboChucVu.SelectedValue.ToString() + "')";
+            else
+                Public.sql = "Update QuanLyTaiKhoan Set tenTaiKhoan=N'" + txtTaiKhoan.Text + "', matKhau=N'" + txtMatKhau.Text + "', maChucVu = N'" + cboChucVu.SelectedValue.ToString() + "' Where tenTaiKhoan=N'" + macu + "'";
+            if (Public.ThucHienSQL(Public.sql) == true)
             {
-                if (KtThem == true)
-                    Public.sql = "Insert into QuanLyTaiKhoan(tenTaiKhoan, matKhau, maChucVu) Values(N'" + txtTaiKhoan.Text + "',N'" + txtMatKhau.Text + "',N'" + cboChucVu.SelectedValue.ToString() + "')";
-                else
-                    Public.sql = "Update QuanLyTaiKhoan Set tenTaiKhoan=N'" + txtTaiKhoan.Text + "', matKhau=N'" + txtMatKhau.Text + "', maChucVu = N'" + cboChucVu.SelectedValue.ToString() + "' Where tenTaiKhoan=N'" + macu + "'";
-                if (Public.ThucHienSQL(Public.sql) == true)
+                MessageBox.Show("Cập nhật tài khoản thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XoaTrang();
+                KhoaMo(true);
+                LayNguon();
+                try
                 {
-                    MessageBox.Show("Cập nhật tài khoản thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    XoaTrang();
-                    KhoaMo(true);
-                    LayNguon();
-                    try
-                    {
-                        dgDanhMuc_CellMouseClick(sender, vt);
-                    }
-                    catch (Exception ex) { Console.WriteLine("Lỗi: " + ex.Message.ToString()); }
+                    dgDanhMuc_CellMouseClick(sender, vt);
                 }
+                catch (Exception ex) { Console.WriteLine("Lỗi: " + ex.Message.ToString()); }
             }
         }
 
@@ -175,6 +174,11 @@ namespace FormChinh
             cboChucVu.DataSource = dtChucVu;
             cboChucVu.DisplayMember = "tenChucVu";
             cboChucVu.ValueMember = "maChucVu";
+        }
+
+        private void tbTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            LayNguon($"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan LIKE '%{tbTimKiem.Text}%' OR maChucVu LIKE '%{tbTimKiem.Text}%'");
         }
     }
 }

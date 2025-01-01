@@ -31,7 +31,7 @@ namespace FormChinh
                 txtMK.Focus(); return;
             }
 
-            dtDangNhap = Public.LayDuLieu(String.Format(HangSo.timTaiKhoan, txtTK.Text, txtMK.Text));
+            dtDangNhap = Public.LayDuLieu(String.Format(Queries.timTaiKhoan, txtTK.Text, txtMK.Text));
             if (dtDangNhap.Rows.Count >= 1)
             {
                 this.Hide();

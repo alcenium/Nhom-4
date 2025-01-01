@@ -106,17 +106,17 @@
     <Compile Include="frmQuenMK.Designer.cs">
       <DependentUpon>frmQuenMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTaiKhoanCaNhan.cs">
+    <Compile Include="frmTaiKhoanSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTaiKhoanCaNhan.Designer.cs">
-      <DependentUpon>frmTaiKhoanCaNhan.cs</DependentUpon>
+    <Compile Include="frmTaiKhoanSinhVien.Designer.cs">
+      <DependentUpon>frmTaiKhoanSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinGiangVien.cs">
+    <Compile Include="frmTaiKhoanGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongTinGiangVien.Designer.cs">
-      <DependentUpon>frmThongTinGiangVien.cs</DependentUpon>
+    <Compile Include="frmTaiKhoanGiangVien.Designer.cs">
+      <DependentUpon>frmTaiKhoanGiangVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThucHienDiemDanh.cs">
       <SubType>Form</SubType>
@@ -124,7 +124,7 @@
     <Compile Include="frmThucHienDiemDanh.Designer.cs">
       <DependentUpon>frmThucHienDiemDanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="HangSo.cs" />
+    <Compile Include="Queries.cs" />
     <Compile Include="MDIForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,11 +171,11 @@
     <EmbeddedResource Include="frmQuenMK.resx">
       <DependentUpon>frmQuenMK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTaiKhoanCaNhan.resx">
-      <DependentUpon>frmTaiKhoanCaNhan.cs</DependentUpon>
+    <EmbeddedResource Include="frmTaiKhoanSinhVien.resx">
+      <DependentUpon>frmTaiKhoanSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinGiangVien.resx">
-      <DependentUpon>frmThongTinGiangVien.cs</DependentUpon>
+    <EmbeddedResource Include="frmTaiKhoanGiangVien.resx">
+      <DependentUpon>frmTaiKhoanGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThucHienDiemDanh.resx">
       <DependentUpon>frmThucHienDiemDanh.cs</DependentUpon>

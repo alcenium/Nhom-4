@@ -63,21 +63,21 @@ namespace FormChinh
             }
             String gioiTinh = cbNam.Checked ? "Nam" : "Nữ";
 
-            if (Public.LayDuLieu(String.Format(HangSo.timMaSinhVien, tbMaSinhVien.Text)).Rows.Count > 0)
+            if (Public.LayDuLieu(String.Format(Queries.timMaSinhVien, tbMaSinhVien.Text)).Rows.Count > 0)
             {
                 MessageBox.Show("Sinh viên với mã đó đã tồn tại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             maCu = "";
-            Public.ThucHienSQL(String.Format(HangSo.themSinhVien, tbMaSinhVien.Text, tbHoTen.Text, dateNgaySinh.Value, cbLop.Text, gioiTinh, tbSoDienThoai.Text, tbEmail.Text));
+            Public.ThucHienSQL(String.Format(Queries.themSinhVien, tbMaSinhVien.Text, tbHoTen.Text, dateNgaySinh.Value, cbLop.Text, gioiTinh, tbSoDienThoai.Text, tbEmail.Text));
             LayNguon();
         }
 
         private void bXoa_Click(object sender, EventArgs e)
         {
             if (maCu == "") return;
-            Public.ThucHienSQL(String.Format(HangSo.xoaSinhVien, maCu));
+            Public.ThucHienSQL(String.Format(Queries.xoaSinhVien, maCu));
             LayNguon();
             maCu = "";
         }
@@ -136,7 +136,7 @@ namespace FormChinh
 
         private void tbTimKiem_TextChanged(object sender, EventArgs e)
         {
-            LayNguon(String.Format(HangSo.timSinhVien, tbTimKiem.Text));
+            LayNguon(String.Format(Queries.timSinhVien, tbTimKiem.Text));
         }
     }
 }
