@@ -97,6 +97,7 @@
             this.quảnLýChuyênNgànhToolStripMenuItem.Name = "quảnLýChuyênNgànhToolStripMenuItem";
             this.quảnLýChuyênNgànhToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.quảnLýChuyênNgànhToolStripMenuItem.Text = "Quản Lý Chuyên Ngành";
+            this.quảnLýChuyênNgànhToolStripMenuItem.Click += new System.EventHandler(this.quảnLýChuyênNgànhToolStripMenuItem_Click);
             // 
             // điểmDanhToolStripMenuItem
             // 

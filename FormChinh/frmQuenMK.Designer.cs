@@ -72,7 +72,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(274, 159);
+            this.btnThoat.Location = new System.Drawing.Point(286, 159);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(113, 36);
             this.btnThoat.TabIndex = 4;
@@ -100,20 +100,20 @@
             // 
             // lbQuestion
             // 
-            this.lbQuestion.AutoSize = true;
             this.lbQuestion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuestion.Location = new System.Drawing.Point(145, 113);
+            this.lbQuestion.Location = new System.Drawing.Point(145, 104);
             this.lbQuestion.Name = "lbQuestion";
-            this.lbQuestion.Size = new System.Drawing.Size(53, 19);
+            this.lbQuestion.Size = new System.Drawing.Size(158, 27);
             this.lbQuestion.TabIndex = 7;
             this.lbQuestion.Text = "1 + 1 =";
+            this.lbQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbAnswer
             // 
             this.tbAnswer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAnswer.Location = new System.Drawing.Point(309, 105);
+            this.tbAnswer.Location = new System.Drawing.Point(300, 105);
             this.tbAnswer.Name = "tbAnswer";
-            this.tbAnswer.Size = new System.Drawing.Size(92, 27);
+            this.tbAnswer.Size = new System.Drawing.Size(101, 27);
             this.tbAnswer.TabIndex = 8;
             // 
             // frmQuenMK

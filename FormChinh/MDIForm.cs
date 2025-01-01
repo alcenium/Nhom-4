@@ -24,12 +24,7 @@ namespace FormChinh
             this.loaiTK = loaiTK;
 
             tstbTenTaiKhoan.Text = $"{tenTK}";
-            switch (loaiTK)
-            {
-                case "ql": tstbLoaiTaiKhoan.Text = "Quản lý"; break;
-                case "sv": tstbLoaiTaiKhoan.Text = "Sinh viên"; break;
-                case "gv": tstbLoaiTaiKhoan.Text = "Giảng viên"; break;
-            }
+            tstbLoaiTaiKhoan.Text = Public.LayDuLieu(String.Format(HangSo.loaiTaiKhoan, loaiTK)).Rows[0][0].ToString();
         }
 
         private void mnuQlySinhVien_Click(object sender, EventArgs e)
@@ -96,6 +91,13 @@ namespace FormChinh
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void quảnLýChuyênNgànhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChuyenNganh frm = new frmChuyenNganh();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

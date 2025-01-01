@@ -124,6 +124,7 @@
     <Compile Include="frmThucHienDiemDanh.Designer.cs">
       <DependentUpon>frmThucHienDiemDanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="HangSo.cs" />
     <Compile Include="MDIForm.cs">
       <SubType>Form</SubType>
     </Compile>
