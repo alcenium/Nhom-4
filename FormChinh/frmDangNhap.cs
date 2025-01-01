@@ -31,9 +31,8 @@ namespace FormChinh
                 txtMK.Focus(); return;
             }
 
-            sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = '{txtTK.Text}' AND matKhau = '{txtMK.Text}'";
-            dtDangNhap = Public.LayDuLieu(sql);
-            if (dtDangNhap.Rows.Count == 1)
+            dtDangNhap = Public.LayDuLieu(String.Format(HangSo.timTaiKhoan, txtTK.Text, txtMK.Text));
+            if (dtDangNhap.Rows.Count >= 1)
             {
                 this.Hide();
                 MDIForm frm = new MDIForm(this, txtTK.Text, dtDangNhap.Rows[0][2].ToString());

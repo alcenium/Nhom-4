@@ -35,8 +35,7 @@ namespace FormChinh
                 return;
             }
 
-            sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = '{tenTK}' AND matKhau = '{txtMatKhauCu.Text}'";
-            if (Public.LayDuLieu(sql).Rows.Count <= 0)
+            if (Public.LayDuLieu(String.Format(HangSo.timTaiKhoan, tenTK, txtMatKhauCu.Text)).Rows.Count <= 0)
             {
                 MessageBox.Show("Bạn đã nhập sai mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -57,8 +56,7 @@ namespace FormChinh
                 return;
             }
 
-            sql = $"UPDATE QuanLyTaiKhoan SET matKhau = '{txtMatKhauMoi.Text}' WHERE tenTaiKhoan = '{tenTK}'";
-            Public.ThucHienSQL(sql);
+            Public.ThucHienSQL(String.Format(HangSo.doiMatKhau, txtMatKhauMoi.Text, tenTK));
             MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

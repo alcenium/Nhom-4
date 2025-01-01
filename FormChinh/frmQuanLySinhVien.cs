@@ -13,7 +13,6 @@ namespace FormChinh
 {
     public partial class frmQuanLySinhVien : Form
     {
-        string sql;
         string maCu = "";
         MDIForm parent;
 
@@ -35,10 +34,11 @@ namespace FormChinh
             KhoaMo(true);
         }
 
-        private void frmQuanLySinhVien_Activated(object sender, EventArgs e)
+        public void Update()
         {
             LayNguon();
             Public.GanNguonComboBox(cbLop, "maLop", "maLop", "SELECT * FROM Lop");
+            KhoaMo(true);
         }
 
         public void KhoaMo(bool b)
@@ -63,24 +63,21 @@ namespace FormChinh
             }
             String gioiTinh = cbNam.Checked ? "Nam" : "Nữ";
 
-            sql = $"SELECT * FROM SinhVien WHERE maSV = '{tbMaSinhVien.Text}'";
-            if (Public.LayDuLieu(sql).Rows.Count > 0)
+            if (Public.LayDuLieu(String.Format(HangSo.timMaSinhVien, tbMaSinhVien.Text)).Rows.Count > 0)
             {
                 MessageBox.Show("Sinh viên với mã đó đã tồn tại!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             maCu = "";
-            sql = $"INSERT INTO SinhVien VALUES ('{tbMaSinhVien.Text}', '{tbHoTen.Text}', '{dateNgaySinh.Value}', '{cbLop.Text}', '{gioiTinh}', '{tbSoDienThoai.Text}', '{tbEmail.Text}')";
-            Public.ThucHienSQL(sql);
+            Public.ThucHienSQL(String.Format(HangSo.themSinhVien, tbMaSinhVien.Text, tbHoTen.Text, dateNgaySinh.Value, cbLop.Text, gioiTinh, tbSoDienThoai.Text, tbEmail.Text));
             LayNguon();
         }
 
         private void bXoa_Click(object sender, EventArgs e)
         {
             if (maCu == "") return;
-            sql = $"DELETE FROM SinhVien WHERE maSV='{maCu}'";
-            Public.ThucHienSQL(sql);
+            Public.ThucHienSQL(String.Format(HangSo.xoaSinhVien, maCu));
             LayNguon();
             maCu = "";
         }
@@ -135,13 +132,11 @@ namespace FormChinh
             frmQuanLySinhVien_Sua frm = new frmQuanLySinhVien_Sua(this, tbMaSinhVien.Text, tbHoTen.Text, cbLop.DisplayMember, cbNam.Checked ? "Nam" : "Nữ", dateNgaySinh.Value, tbSoDienThoai.Text, tbEmail.Text);
             frm.MdiParent = this.parent;
             frm.Show();
-            this.Hide();
         }
 
         private void tbTimKiem_TextChanged(object sender, EventArgs e)
         {
-            sql = $"SELECT * FROM SinhVien WHERE maSV LIKE '%{tbTimKiem.Text}%' OR hoTen LIKE '%{tbTimKiem.Text}%' OR maLop LIKE '%{tbTimKiem.Text}%'";
-            LayNguon(sql);
+            LayNguon(String.Format(HangSo.timSinhVien, tbTimKiem.Text));
         }
     }
 }

@@ -14,7 +14,7 @@ namespace FormChinh
     public partial class frmQuenMK : Form
     {
         private frmDangNhap parent;
-        private String sql;
+        private DataTable dtTaiKhoan;
         private int num1 = 0, num2 = 0;
         public frmQuenMK(frmDangNhap parent)
         {
@@ -35,15 +35,15 @@ namespace FormChinh
         {
             if (tbAnswer.Text == $"{num1 + num2}")
             {
-                sql = $"SELECT * FROM QuanLyTaiKhoan WHERE tenTaiKhoan = '{tbTenTaiKhoan.Text}'";
-                if (Public.LayDuLieu(sql).Rows.Count <= 0)
+                dtTaiKhoan = Public.LayDuLieu(String.Format(HangSo.timTenTaiKhoan, tbTenTaiKhoan.Text));
+                if (dtTaiKhoan.Rows.Count <= 0)
                 {
                     MessageBox.Show("Sai tên tài khoản!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ReloadCaptcha();
                     return;
                 }
 
-                MessageBox.Show(Text = $"Mật khẩu của bạn là: {Public.LayDuLieu(sql).Rows[0]["MatKhau"].ToString()}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Text = $"Mật khẩu của bạn là: {dtTaiKhoan.Rows[0]["MatKhau"].ToString()}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

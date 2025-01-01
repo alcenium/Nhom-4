@@ -42,7 +42,7 @@ namespace FormChinh
         private void bHuy_Click(object sender, EventArgs e)
         {
             this.Close();
-            parent.Show();
+            parent.Update();
         }
 
         private void bXacNhan_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace FormChinh
             sql = $"UPDATE SinhVien SET hoTen = N'{tbHoTen.Text}', maLop = '{cbLop.Text}', gioiTinh = N'{(cbNam.Checked ? "Nam" : "Nữ")}', ngaySinh = '{dateNgaySinh.Value.ToString("yyyy-MM-dd")}', SDT = '{tbSoDienThoai.Text}', email = '{tbEmail.Text}' WHERE maSV = '{tbMaSinhVien.Text}'";
             Public.ThucHienSQL(sql);
             this.Close();
-            parent.Show();
+            parent.Update();
         }
 
         private void cbNam_CheckedChanged(object sender, EventArgs e)

@@ -396,7 +396,6 @@
             this.Name = "frmQuanLySinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sinh Viên";
-            this.Activated += new System.EventHandler(this.frmQuanLySinhVien_Activated);
             this.Load += new System.EventHandler(this.frmQuanLySinhVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
