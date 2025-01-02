@@ -79,13 +79,6 @@ namespace FormChinh
             }
         }
 
-        private void quảnLýChuyênNgànhToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmChuyenNganh frm = new frmChuyenNganh();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
         private void mnuThongTinCaNhan_Click(object sender, EventArgs e)
         {
             switch (loaiTK)
@@ -109,6 +102,13 @@ namespace FormChinh
         private void mnuQlyTaiKhoan_Click(object sender, EventArgs e)
         {
             frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuQlyChuyenNganh_Click(object sender, EventArgs e)
+        {
+            frmChuyenNganh frm = new frmChuyenNganh();
             frm.MdiParent = this;
             frm.Show();
         }

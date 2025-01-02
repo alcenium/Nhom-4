@@ -84,18 +84,18 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(164, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
             // 
             // xếpLịchThủCôngToolStripMenuItem
             // 
             this.xếpLịchThủCôngToolStripMenuItem.Name = "xếpLịchThủCôngToolStripMenuItem";
-            this.xếpLịchThủCôngToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.xếpLịchThủCôngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xếpLịchThủCôngToolStripMenuItem.Text = "Xếp lịch thủ công";
             // 
             // xếpLịchTựĐộngToolStripMenuItem
             // 
             this.xếpLịchTựĐộngToolStripMenuItem.Name = "xếpLịchTựĐộngToolStripMenuItem";
-            this.xếpLịchTựĐộngToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.xếpLịchTựĐộngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xếpLịchTựĐộngToolStripMenuItem.Text = "Xếp lịch tự động";
             // 
             // điểmDanhToolStripMenuItem
@@ -198,12 +198,14 @@
             this.mnuQlyLopHoc.Name = "mnuQlyLopHoc";
             this.mnuQlyLopHoc.Size = new System.Drawing.Size(200, 22);
             this.mnuQlyLopHoc.Text = "Quản lý Lớp Học";
+            this.mnuQlyLopHoc.Click += new System.EventHandler(this.mnuQlyLopHoc_Click);
             // 
             // mnuQlySinhVien
             // 
             this.mnuQlySinhVien.Name = "mnuQlySinhVien";
             this.mnuQlySinhVien.Size = new System.Drawing.Size(200, 22);
             this.mnuQlySinhVien.Text = "Quản lý Sinh Viên";
+            this.mnuQlySinhVien.Click += new System.EventHandler(this.mnuQlySinhVien_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -215,6 +217,7 @@
             this.mnuQlyChuyenNganh.Name = "mnuQlyChuyenNganh";
             this.mnuQlyChuyenNganh.Size = new System.Drawing.Size(200, 22);
             this.mnuQlyChuyenNganh.Text = "Quản Lý Chuyên Ngành";
+            this.mnuQlyChuyenNganh.Click += new System.EventHandler(this.mnuQlyChuyenNganh_Click);
             // 
             // toolStripMenuItem5
             // 
