@@ -106,7 +106,7 @@
             // 
             // tbHoTen
             // 
-            this.tbHoTen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHoTen.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHoTen.Location = new System.Drawing.Point(126, 55);
             this.tbHoTen.Name = "tbHoTen";
             this.tbHoTen.Size = new System.Drawing.Size(231, 27);
@@ -114,7 +114,7 @@
             // 
             // tbSDT
             // 
-            this.tbSDT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSDT.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSDT.Location = new System.Drawing.Point(126, 144);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(231, 27);
@@ -132,7 +132,7 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.Location = new System.Drawing.Point(126, 189);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(231, 27);
@@ -151,7 +151,7 @@
             // tbLop
             // 
             this.tbLop.Enabled = false;
-            this.tbLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLop.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLop.Location = new System.Drawing.Point(489, 102);
             this.tbLop.Name = "tbLop";
             this.tbLop.Size = new System.Drawing.Size(231, 27);
@@ -204,7 +204,7 @@
             // tbNganh
             // 
             this.tbNganh.Enabled = false;
-            this.tbNganh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNganh.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNganh.Location = new System.Drawing.Point(489, 147);
             this.tbNganh.Name = "tbNganh";
             this.tbNganh.Size = new System.Drawing.Size(231, 27);
@@ -213,7 +213,7 @@
             // tbMSV
             // 
             this.tbMSV.Enabled = false;
-            this.tbMSV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMSV.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMSV.Location = new System.Drawing.Point(489, 55);
             this.tbMSV.Name = "tbMSV";
             this.tbMSV.Size = new System.Drawing.Size(231, 27);
@@ -243,7 +243,7 @@
             // 
             this.tbNgaySinh.CalendarFont = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.tbNgaySinh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNgaySinh.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.tbNgaySinh.Location = new System.Drawing.Point(126, 99);
             this.tbNgaySinh.Name = "tbNgaySinh";
@@ -297,7 +297,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmTaiKhoanSinhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyTaiKhoanCaNhan";
             this.ResumeLayout(false);
             this.PerformLayout();

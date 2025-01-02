@@ -57,7 +57,7 @@ namespace FormChinh
             {
                 try
                 {
-                    Public.sql = "INSERT INTO QuanLyTaiKhoan (tenTaiKhoan, matKhau) VALUES (N'" + txtTenTaiKhoan.Text + "',N'" + txtMatKhau.Text + "')";
+                    Public.sql = "INSERT INTO QuanLyTaiKhoan (tenTaiKhoan, matKhau, maChucVu) VALUES (N'" + txtTenTaiKhoan.Text + "',N'" + txtMatKhau.Text + "',N'sv')";
                     if (Public.ThucHienSQL(Public.sql) == true)
                     {
                         MessageBox.Show("Tạo tài khoản thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
